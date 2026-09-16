@@ -49,12 +49,11 @@ const {
   ContinueStatement,
   ArrayPattern,
   MethodDefinition,
-  Super
+  Super,
 } = esprima.Syntax;
 
 function isGettextCall(callExpression) {
-  return callExpression.callee.type === Identifier &&
-    callExpression.callee.name === GETTEXT_FUNCTION_NAME;
+  return callExpression.callee.type === Identifier && callExpression.callee.name === GETTEXT_FUNCTION_NAME;
 }
 
 const GETTEXT_FUNCTION_NAME = '__';
@@ -67,9 +66,7 @@ function findTranslationCalls(expression) {
     case ExpressionStatement:
       return findTranslationCalls(expression.expression);
     case VariableDeclaration:
-      return expression.declarations
-        .map(findTranslationCalls)
-        .flat();
+      return expression.declarations.map(findTranslationCalls).flat();
     case VariableDeclarator:
       return findTranslationCalls(expression.init);
     case AssignmentPattern:
@@ -78,19 +75,12 @@ function findTranslationCalls(expression) {
     case ArrowFunctionExpression:
     case FunctionDeclaration:
     case FunctionExpression:
-      return expression.params
-        .map(findTranslationCalls)
-        .concat(findTranslationCalls(expression.body))
-        .flat();
+      return expression.params.map(findTranslationCalls).concat(findTranslationCalls(expression.body)).flat();
     case ClassBody:
     case BlockStatement:
-      return expression.body
-        .map(findTranslationCalls)
-        .flat();
+      return expression.body.map(findTranslationCalls).flat();
     case NewExpression:
-      return findTranslationCalls(expression.callee)
-        .concat(expression.arguments.map(findTranslationCalls))
-        .flat();
+      return findTranslationCalls(expression.callee).concat(expression.arguments.map(findTranslationCalls)).flat();
     case CallExpression:
       if (isGettextCall(expression)) {
         if (expression.arguments.length !== 1) {
@@ -99,49 +89,30 @@ function findTranslationCalls(expression) {
 
         return [expression];
       } else {
-        return findTranslationCalls(expression.callee)
-          .concat(expression.arguments.map(findTranslationCalls))
-          .flat();
+        return findTranslationCalls(expression.callee).concat(expression.arguments.map(findTranslationCalls)).flat();
       }
     case WhileStatement:
-      return [expression.test, expression.body]
-        .map(findTranslationCalls)
-        .flat();
+      return [expression.test, expression.body].map(findTranslationCalls).flat();
     case ConditionalExpression:
     case IfStatement:
-      return [expression.test, expression.consequent, expression.alternate]
-        .map(findTranslationCalls)
-        .flat();
+      return [expression.test, expression.consequent, expression.alternate].map(findTranslationCalls).flat();
     case ForStatement:
-      return [expression.init, expression.test, expression.update, expression.body]
-        .map(findTranslationCalls)
-        .flat();
+      return [expression.init, expression.test, expression.update, expression.body].map(findTranslationCalls).flat();
     case ForOfStatement:
     case ForInStatement:
-      return [expression.right, expression.body]
-        .map(findTranslationCalls)
-        .flat();
+      return [expression.right, expression.body].map(findTranslationCalls).flat();
     case SwitchStatement:
-      return expression.cases
-        .map(findTranslationCalls)
-        .concat(findTranslationCalls(expression.discriminant))
-        .flat();
+      return expression.cases.map(findTranslationCalls).concat(findTranslationCalls(expression.discriminant)).flat();
     case SwitchCase:
-      return expression.consequent
-        .map(findTranslationCalls)
-        .flat();
+      return expression.consequent.map(findTranslationCalls).flat();
     case ClassDeclaration:
       return findTranslationCalls(expression.body);
     case LogicalExpression:
     case BinaryExpression:
-      return [expression.left, expression.right]
-        .map(findTranslationCalls)
-        .flat();
+      return [expression.left, expression.right].map(findTranslationCalls).flat();
     case ObjectPattern:
     case ObjectExpression:
-      return expression.properties
-        .map(findTranslationCalls)
-        .flat();
+      return expression.properties.map(findTranslationCalls).flat();
     case Property:
     case MethodDefinition:
       return findTranslationCalls(expression.value);
@@ -152,17 +123,13 @@ function findTranslationCalls(expression) {
     case SpreadElement:
       return findTranslationCalls(expression.argument);
     case ArrayExpression:
-      return expression.elements
-        .map(findTranslationCalls)
-        .flat();
+      return expression.elements.map(findTranslationCalls).flat();
     case TryStatement:
     case CatchClause:
       return findTranslationCalls(expression.block);
     case TemplateLiteral:
     case SequenceExpression:
-      return expression.expressions
-        .map(findTranslationCalls)
-        .flat();
+      return expression.expressions.map(findTranslationCalls).flat();
     case MemberExpression:
     case ComputedMemberExpression:
     case StaticMemberExpression:

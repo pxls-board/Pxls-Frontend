@@ -1,0 +1,217 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+@import './themes.css';
+
+@source '../../../app';
+
+@theme {
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+
+  /* Pxls surfaces. Themes override these through their variants (themes.css). */
+  --color-pxls-canvas: #c5c5c5;
+  --color-pxls-panel: var(--ui-bg);
+  --color-pxls-panel-header: var(--ui-bg-elevated);
+  --color-pxls-bubble: rgb(0 0 0 / 0.7);
+  --color-pxls-bubble-text: #fff;
+  --color-pxls-palette: rgb(255 255 255 / 0.8);
+  --color-pxls-overlay: rgb(255 255 255 / 0.9);
+  --color-pxls-cursor: #fff;
+  --color-pxls-cursor-text: #000;
+  --color-pxls-chat-odd: rgb(0 0 0 / 0.04);
+  --color-pxls-chat-separator: var(--ui-border);
+  --color-pxls-ping: #feedd1;
+  --color-pxls-ping-flash: #8ef7d1;
+  --color-pxls-reply: #ffdfab;
+  --color-pxls-mention: #c000c0;
+  --color-pxls-server-action: #777;
+  --color-pxls-copy-pulse: rgb(0 211 221 / 0.7);
+  --color-pxls-notification: #b20;
+
+  --animate-pxls-bump: pxls-bump 1s ease-out;
+  --animate-pxls-shake: pxls-shake 0.5s ease-in-out;
+  --animate-pxls-pulse: pxls-pulse 1s ease-out;
+  --animate-pxls-plusone: pxls-plusone 1s ease-out;
+  --animate-pxls-flash: pxls-flash 1s ease-out;
+  --animate-pxls-copy-pulse: pxls-copy-pulse 0.2s ease-out;
+
+  @keyframes pxls-bump {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.12);
+    }
+  }
+  @keyframes pxls-shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    20%,
+    60% {
+      transform: translateX(-6px);
+    }
+    40%,
+    80% {
+      transform: translateX(6px);
+    }
+  }
+  @keyframes pxls-pulse {
+    0% {
+      box-shadow: 0 0 0 0 var(--ui-primary);
+    }
+    100% {
+      box-shadow: 0 0 0 1rem transparent;
+    }
+  }
+  @keyframes pxls-plusone {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-2rem);
+    }
+  }
+  @keyframes pxls-flash {
+    0% {
+      background-color: var(--color-pxls-ping-flash);
+    }
+  }
+  @keyframes pxls-copy-pulse {
+    50% {
+      background-color: var(--color-pxls-copy-pulse);
+    }
+  }
+}
+
+:root {
+  --ui-radius: 0.375rem;
+}
+
+html,
+body,
+#__nuxt {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+/* Canvas rendering. Tailwind has no utility for these. */
+@utility pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+@utility checkerboard {
+  background-image:
+    linear-gradient(45deg, #bbb 25%, transparent 25%), linear-gradient(-45deg, #bbb 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #bbb 75%), linear-gradient(-45deg, transparent 75%, #bbb 75%);
+  background-size: 8px 8px;
+  background-position:
+    0 0,
+    0 4px,
+    4px -4px,
+    -4px 0;
+  background-color: #fff;
+}
+
+@utility grid-lines {
+  background-image:
+    linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px);
+}
+
+/* kbd inside translated strings (rendered with v-html). */
+kbd {
+  @apply rounded border border-default bg-elevated px-1 font-mono text-[0.85em];
+}
+
+/* Chat and notification markdown output (DOM built by pxlsMarkdown). */
+.pxls-markdown {
+  overflow-wrap: anywhere;
+
+  & a {
+    @apply text-primary underline underline-offset-2;
+  }
+  & code {
+    @apply rounded bg-elevated px-1 font-mono text-[0.9em];
+  }
+  & .emoji {
+    @apply inline-block h-[1.3em] w-auto align-[-0.3em];
+  }
+  & .mention {
+    @apply font-semibold text-pxls-mention;
+  }
+  & .coordinates {
+    @apply font-mono;
+  }
+}
+
+/* Gradient chat name colors (classes generated from /info at runtime). */
+.gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+}
+
+/* Legacy classes still used by the staff-only admin script (public/admin). */
+.text-button {
+  @apply inline-flex cursor-pointer items-center rounded-md border border-default bg-elevated px-2 py-1 text-sm hover:bg-accented disabled:cursor-not-allowed disabled:opacity-60;
+}
+.dangerous-button {
+  @apply border-error bg-error text-inverted hover:bg-error/80;
+}
+.floating-panel {
+  @apply rounded-lg border border-default bg-default p-3 text-default shadow-lg;
+}
+.message {
+  @apply fixed top-1/2 left-1/2 z-40 max-h-[80vh] -translate-x-1/2 -translate-y-1/2 overflow-auto;
+}
+.buttons {
+  @apply mt-3 flex justify-end gap-2;
+}
+.chatmod-container {
+  & table {
+    @apply w-full border-separate border-spacing-1 text-left;
+  }
+  & h5 {
+    @apply mt-3 mb-1 font-semibold;
+  }
+  /* Raw inputs from the admin script; Nuxt UI inputs carry a data-slot. */
+  & :is(input, select, textarea):not([data-slot]):not([type='checkbox'], [type='radio']) {
+    @apply w-full rounded border border-default bg-default px-2 py-1;
+  }
+}
+.text-red {
+  @apply text-error;
+}
+.text-green {
+  @apply text-success;
+}
+.text-orange {
+  @apply text-warning;
+}
+
+/* Long-form panel content (info, FAQ, notifications). */
+.pxls-prose {
+  @apply space-y-2 text-sm leading-relaxed;
+
+  & a {
+    @apply text-primary underline underline-offset-2;
+  }
+  & ol {
+    @apply list-decimal space-y-1 pl-5;
+  }
+  & ul {
+    @apply list-disc space-y-1 pl-5;
+  }
+  & dt {
+    @apply mt-3 font-semibold text-highlighted;
+  }
+  & dd {
+    @apply mt-1 ml-0;
+  }
+}

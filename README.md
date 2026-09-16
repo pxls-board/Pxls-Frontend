@@ -22,7 +22,7 @@ Automatically built files are available as artifacts on each push [here][actions
 
 The following are required on both the **build** and **target** system(s):
 
-* [Node.js](https://nodejs.org/en/) (LTS or newer)
+- [Node.js](https://nodejs.org/en/) (LTS or newer)
 
 Install dependencies with `npm install`.
 
@@ -35,9 +35,9 @@ Copy the reference `config.example.json5` to `config.json5` and edit as necessar
 Run with `npm start`.
 
 # Licenses
-- This project includes icons from Font Awesome Free 5.9.0 by fontawesome - https://fontawesome.com
-    - License: https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
 
+- This project includes icons from Font Awesome Free 5.9.0 by fontawesome - https://fontawesome.com
+  - License: https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
 
 [place]: https://reddit.com/r/place/
 [backend]: https://github.com/pxlsspace/Pxls/

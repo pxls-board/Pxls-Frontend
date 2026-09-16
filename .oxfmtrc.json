@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 120,
+  "singleQuote": true,
+  "semi": true,
+  "trailingComma": "all",
+  "quoteProps": "consistent",
+  "sortTailwindcss": {
+    "stylesheet": "./app/assets/css/main.css"
+  },
+  "ignorePatterns": ["app/vendor/**", "public/**", "po/**", ".nuxt/**", ".output/**", "package-lock.json"]
+}

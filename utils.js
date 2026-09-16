@@ -11,14 +11,12 @@ const PO = require('pofile');
 function listFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
 
-  files.forEach(file => {
+  files.forEach((file) => {
     let filePath = path.join(dir, file);
     if (fs.statSync(filePath).isDirectory()) {
       listFiles(filePath, fileList);
     } else {
-      filePath = filePath
-        .replace(__dirname, '')
-        .replaceAll('\\', '/');
+      filePath = filePath.replace(__dirname, '').replaceAll('\\', '/');
       fileList.push(filePath);
     }
   });
@@ -36,7 +34,7 @@ exports.listFiles = listFiles;
  * @returns {*|string} The translated string.
  */
 function i18n(str, poFile, args) {
-  const item = poFile.items.find(i => i.msgid === str);
+  const item = poFile.items.find((i) => i.msgid === str);
   if (!item) {
     console.warn(`${poFile.headers.Language}: No translation found for "${str}"`);
   }
@@ -113,12 +111,14 @@ exports.loadPO = loadPO;
  * @returns {Promise<Response>} A promise that resolves to the response.
  */
 function proxyFetch(req, url, options = {}) {
-  return new Promise((resolve, reject) => fetch(url, {
-    ...options,
-    headers: req.headers
-  })
-    .then(res => res.ok ? resolve(res) : reject(res))
-    .catch(reject));
+  return new Promise((resolve, reject) =>
+    fetch(url, {
+      ...options,
+      headers: req.headers,
+    })
+      .then((res) => (res.ok ? resolve(res) : reject(res)))
+      .catch(reject),
+  );
 }
 
 exports.proxyFetch = proxyFetch;
@@ -140,5 +140,5 @@ exports.handlebarsHelpers = (poFile) => ({
   },
   or() {
     return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
-  }
+  },
 });

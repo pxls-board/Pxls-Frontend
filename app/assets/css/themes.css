@@ -1,0 +1,201 @@
+/*
+ * Pxls themes as Tailwind variants.
+ *
+ * The settings store puts `data-pxls-theme="<name>"` on <html> and switches
+ * Nuxt UI's color mode, so every theme is usable as a variant anywhere:
+ *
+ *   <div class="bg-pxls-panel synthwave:bg-linear-to-r synthwave:from-[#2a0161]">
+ *
+ * The built-in `dark:` variant covers the "Dark" theme (and every dark-based
+ * theme). Each block below sets the theme's shared tokens once so components
+ * only need variant classes for theme-specific flair.
+ */
+
+@custom-variant darker (&:where([data-pxls-theme='darker'], [data-pxls-theme='darker'] *));
+@custom-variant blue (&:where([data-pxls-theme='blue'], [data-pxls-theme='blue'] *));
+@custom-variant purple (&:where([data-pxls-theme='purple'], [data-pxls-theme='purple'] *));
+@custom-variant green (&:where([data-pxls-theme='green'], [data-pxls-theme='green'] *));
+@custom-variant matte (&:where([data-pxls-theme='matte'], [data-pxls-theme='matte'] *));
+@custom-variant terminal (&:where([data-pxls-theme='terminal'], [data-pxls-theme='terminal'] *));
+@custom-variant red (&:where([data-pxls-theme='red'], [data-pxls-theme='red'] *));
+@custom-variant synthwave (&:where([data-pxls-theme='synthwave'], [data-pxls-theme='synthwave'] *));
+@custom-variant pink (&:where([data-pxls-theme='pink'], [data-pxls-theme='pink'] *));
+@custom-variant blurple (&:where([data-pxls-theme='blurple'], [data-pxls-theme='blurple'] *));
+
+:root {
+  @variant dark {
+    --color-pxls-canvas: #1a1a1a;
+    --color-pxls-palette: rgb(0 0 0 / 0.5);
+    --color-pxls-overlay: rgb(0 0 0 / 0.9);
+    --color-pxls-cursor: #474a48;
+    --color-pxls-cursor-text: #fff;
+    --color-pxls-chat-odd: rgb(255 255 255 / 0.04);
+    --color-pxls-ping: #5b5345;
+    --color-pxls-reply: #918674;
+    --color-pxls-mention: #e040e0;
+    --color-pxls-server-action: #9f9f9f;
+  }
+
+  @variant darker {
+    --ui-bg: #000;
+    --ui-bg-muted: #0a0a0a;
+    --ui-bg-elevated: #151515;
+    --ui-bg-accented: #252525;
+    --ui-border: #2f2f2f;
+    --color-pxls-canvas: #000;
+    --color-pxls-panel-header: #222;
+    --color-pxls-bubble: #000;
+    --color-pxls-palette: #000;
+    --color-pxls-chat-odd: #111;
+  }
+
+  @variant blue {
+    --ui-primary: var(--ui-color-info-400);
+    --ui-bg: #171e79;
+    --ui-bg-muted: #152975;
+    --ui-bg-elevated: #1d2a8a;
+    --ui-bg-accented: #1d429f;
+    --ui-border: #1236a4;
+    --color-pxls-canvas: #030764;
+    --color-pxls-panel-header: #212697;
+    --color-pxls-bubble: #07138cb0;
+    --color-pxls-palette: rgb(7 32 142 / 0.5);
+    --color-pxls-chat-odd: #072073;
+  }
+
+  @variant purple {
+    --ui-primary: #b57edc;
+    --ui-bg: #3d204d;
+    --ui-bg-muted: #2d0c39;
+    --ui-bg-elevated: #5a2f71;
+    --ui-bg-accented: #6b3b85;
+    --ui-border: #1a0a22;
+    --ui-text: #ddd;
+    --color-pxls-canvas: #111;
+    --color-pxls-panel-header: #320241;
+    --color-pxls-palette: #5a2f71cc;
+    --color-pxls-chat-odd: rgb(0 0 0 / 0.1);
+  }
+
+  @variant green {
+    --ui-primary: var(--ui-color-success-400);
+    --ui-bg: #084a0b;
+    --ui-bg-muted: #154a15;
+    --ui-bg-elevated: #01571b;
+    --ui-bg-accented: #023912;
+    --ui-border: #14551f;
+    --color-pxls-canvas: #005f00;
+    --color-pxls-panel-header: #0b330d;
+    --color-pxls-bubble: #013502b0;
+    --color-pxls-palette: rgb(27 96 29 / 0.85);
+    --color-pxls-chat-odd: #014d0b;
+  }
+
+  @variant matte {
+    --ui-primary: #468079;
+    --ui-bg: #242d35;
+    --ui-bg-muted: #1c2228;
+    --ui-bg-elevated: #1c2228;
+    --ui-bg-accented: #141b1f;
+    --ui-border: #468079;
+    --ui-text: #708192;
+    --ui-text-highlighted: #9aabbc;
+    --ui-text-muted: #708192;
+    --color-pxls-canvas: #242d35;
+    --color-pxls-panel-header: #141b1f;
+    --color-pxls-bubble: #141b1fcc;
+    --color-pxls-bubble-text: #708192;
+    --color-pxls-palette: #141b1fcc;
+    --color-pxls-chat-odd: rgb(0 0 0 / 0.1);
+  }
+
+  @variant terminal {
+    --ui-primary: #94e044;
+    --ui-bg: #000801;
+    --ui-bg-muted: #000;
+    --ui-bg-elevated: #001a02;
+    --ui-bg-accented: #004e00;
+    --ui-border: #004e00;
+    --ui-text: #94e044;
+    --ui-text-highlighted: #b6f27a;
+    --ui-text-muted: #008e00;
+    --ui-text-toned: #6cbf2a;
+    --ui-font-family: var(--font-mono);
+    --color-pxls-canvas: #000801;
+    --color-pxls-panel-header: #000;
+    --color-pxls-bubble: #000801;
+    --color-pxls-bubble-text: #94e044;
+    --color-pxls-palette: #000801cc;
+    --color-pxls-chat-odd: rgb(0 0 0 / 0.1);
+    --color-pxls-chat-separator: #004e00;
+    font-family: var(--font-mono);
+  }
+
+  @variant red {
+    --ui-primary: var(--ui-color-warning-400);
+    --ui-bg: #9c0000;
+    --ui-bg-muted: #b81700;
+    --ui-bg-elevated: #b30000;
+    --ui-bg-accented: #be1200;
+    --ui-border: #bd1313;
+    --color-pxls-canvas: #9f1400;
+    --color-pxls-panel-header: #b32727;
+    --color-pxls-bubble: rgb(195 0 0 / 0.75);
+    --color-pxls-palette: rgb(202 25 0 / 0.5);
+    --color-pxls-chat-odd: #bc1818;
+  }
+
+  @variant synthwave {
+    --ui-primary: #fc79ec;
+    --ui-bg: #180027;
+    --ui-bg-muted: #000;
+    --ui-bg-elevated: #1f0f4c;
+    --ui-bg-accented: #2c1c57;
+    --ui-border: #514384;
+    --ui-text: #d8f2ff;
+    --ui-text-muted: #836cdb;
+    --color-pxls-canvas: #1d192c;
+    --color-pxls-panel-header: #00000069;
+    --color-pxls-bubble: #000000d1;
+    --color-pxls-palette: #2c1c57cc;
+    --color-pxls-chat-odd: #9500ff17;
+  }
+
+  @variant pink {
+    --ui-primary: #e0679b;
+    --ui-bg: #ffdfee;
+    --ui-bg-muted: #ffeff7;
+    --ui-bg-elevated: #ffd5e7;
+    --ui-bg-accented: #f8c8dc;
+    --ui-border: #f3a6c8;
+    --ui-text: #1f1f1f;
+    --color-pxls-canvas: #2a1c2d;
+    --color-pxls-panel-header: #ffd5e7;
+    --color-pxls-palette: #ffddf1e3;
+    --color-pxls-overlay: #ffeff7;
+    --color-pxls-chat-odd: #ffe5f0;
+  }
+
+  @variant blurple {
+    --ui-primary: #5865f2;
+    --ui-bg: #323339;
+    --ui-bg-muted: #2c2d32;
+    --ui-bg-elevated: #393a41;
+    --ui-bg-accented: #4f505a;
+    --ui-border: #3f4048;
+    --ui-text: #dfe0e2;
+    --ui-text-highlighted: #fff;
+    --ui-text-muted: #c4c5c9;
+    --ui-text-dimmed: #adaeb4;
+    --ui-radius: 0.5rem;
+    --color-pxls-canvas: #2c2d32;
+    --color-pxls-panel-header: #323339;
+    --color-pxls-bubble: #323339;
+    --color-pxls-bubble-text: #dfe0e2;
+    --color-pxls-palette: #323339;
+    --color-pxls-chat-odd: transparent;
+    --color-pxls-chat-separator: transparent;
+    --color-pxls-ping: rgb(161 99 0 / 0.08);
+    --color-pxls-reply: rgb(88 101 242 / 0.16);
+  }
+}

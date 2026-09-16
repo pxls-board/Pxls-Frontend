@@ -1,0 +1,8 @@
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+  vue-demi: true
+minimumReleaseAgeExclude:
+  - '@vueuse/core@15.0.0'
+  - '@vueuse/metadata@15.0.0'
+  - '@vueuse/shared@15.0.0'

@@ -21,15 +21,18 @@ if (isDevEnvironment) {
 }
 
 function copy() {
-  return src([
-    'public/admin/**/*',
-    'public/themes/**/*',
-    'public/webfonts/**/*',
-    'public/*.wav',
-    'public/favicon.ico',
-    // TODO: minify profile
-    'public/profile/**/*'], { base: 'public', encoding: false })
-    .pipe(dest('dist'));
+  return src(
+    [
+      'public/admin/**/*',
+      'public/themes/**/*',
+      'public/webfonts/**/*',
+      'public/*.wav',
+      'public/favicon.ico',
+      // TODO: minify profile
+      'public/profile/**/*',
+    ],
+    { base: 'public', encoding: false },
+  ).pipe(dest('dist'));
 }
 
 function translateHTML(pofile) {
@@ -47,10 +50,9 @@ function translateHTML(pofile) {
           while ((match = regex.exec(contents)) !== null) {
             let [original, localization] = match;
 
-            localization = localization
-              .replace(/\\'/g, '\'');
+            localization = localization.replace(/\\'/g, "'");
 
-            const item = pofile.items.find(i => i.msgid === localization);
+            const item = pofile.items.find((i) => i.msgid === localization);
             if (!item) {
               console.warn(`No translation found for ${localization}`);
             }
@@ -72,36 +74,25 @@ function translateHTML(pofile) {
 }
 
 function html() {
-  return src(['po/*.po'])
-    .pipe(through.obj(function (file, enc, callback) {
+  return src(['po/*.po']).pipe(
+    through.obj(function (file, enc, callback) {
       const codeIndex = file.basename.lastIndexOf('_');
       const extIndex = file.basename.lastIndexOf('.');
-      const langcode = codeIndex === -1
-        ? ''
-        : file.basename.substring(codeIndex, extIndex === -1
-          ? file.basename.length
-          : extIndex);
+      const langcode =
+        codeIndex === -1 ? '' : file.basename.substring(codeIndex, extIndex === -1 ? file.basename.length : extIndex);
 
       // Source HTML files that don't need to be translated
-      src([
-        'public/auth_done.html',
-        'public/mobile_captcha.html'
-      ], { read: true })
-        .pipe(buffer())
-        .pipe(dest('dist'));
+      src(['public/auth_done.html', 'public/mobile_captcha.html'], { read: true }).pipe(buffer()).pipe(dest('dist'));
 
       // Source all other HTML files
-      src([
-        'public/**/*.html',
-        '!public/auth_done.html',
-        '!public/mobile_captcha.html'
-      ], { read: true })
+      src(['public/**/*.html', '!public/auth_done.html', '!public/mobile_captcha.html'], { read: true })
         .pipe(buffer())
         .pipe(translateHTML(file.path))
         .pipe(rename({ suffix: langcode }))
         .pipe(dest('dist'))
         .once('end', callback);
-    }));
+    }),
+  );
 }
 
 function css() {
@@ -113,8 +104,7 @@ function css() {
 }
 
 function minJS() {
-  return src('public/*.min.js')
-    .pipe(dest('dist'));
+  return src('public/*.min.js').pipe(dest('dist'));
 }
 
 // NOTE ([  ]): pattern for all non-minified .js files
@@ -125,18 +115,13 @@ const SOURCE_FILES = [
   '!public/include/**/*.js',
   '!public/profile/**/*.js',
   '!public/SLIDEIN.js',
-  '!public/serviceWorker.js'
+  '!public/serviceWorker.js',
 ];
 
-const NON_TRANSLATED_SOURCE_FILES = [
-  'public/SLIDEIN.js',
-  'public/serviceWorker.js'
-];
+const NON_TRANSLATED_SOURCE_FILES = ['public/SLIDEIN.js', 'public/serviceWorker.js'];
 
 function lint() {
-  return src(SOURCE_FILES)
-    .pipe(eslint())
-    .pipe(eslint.failAfterError());
+  return src(SOURCE_FILES).pipe(eslint()).pipe(eslint.failAfterError());
 }
 
 function translate(pofile) {
@@ -161,10 +146,10 @@ function translate(pofile) {
             const [start, end] = call.range;
             const length = end - start;
 
-            const original = contract(contents.substring(...argument.range.map(p => p + offset)), 1);
+            const original = contract(contents.substring(...argument.range.map((p) => p + offset)), 1);
             const quote = contents[argument.range[0] + offset];
 
-            const item = pofile.items.find(i => i.msgid === original);
+            const item = pofile.items.find((i) => i.msgid === original);
 
             const replaceContent = (item && item.msgstr[0]) || original;
             const replace = quote + replaceContent.replace(new RegExp(`([^\\\\])([${quote}])`, 'g'), '$1\\$2') + quote;
@@ -190,45 +175,47 @@ function translate(pofile) {
 }
 
 function srcJS() {
-  return src(['po/*.po'])
-    .pipe(through.obj(function (file, enc, callback) {
+  return src(['po/*.po']).pipe(
+    through.obj(function (file, enc, callback) {
       const codeIndex = file.basename.lastIndexOf('_');
       const extIndex = file.basename.lastIndexOf('.');
-      const langcode = codeIndex === -1
-        ? ''
-        : file.basename.substring(codeIndex, extIndex === -1
-          ? file.basename.length
-          : extIndex);
+      const langcode =
+        codeIndex === -1 ? '' : file.basename.substring(codeIndex, extIndex === -1 ? file.basename.length : extIndex);
 
       src(NON_TRANSLATED_SOURCE_FILES, { read: false })
-        .pipe(tap(file => {
-          file.contents = browserify(file.path, { debug: isDevEnvironment })
-            .bundle();
-        }))
+        .pipe(
+          tap((file) => {
+            file.contents = browserify(file.path, { debug: isDevEnvironment }).bundle();
+          }),
+        )
         .pipe(buffer())
         .pipe(gulpIf(isDevEnvironment, sourcemaps.init({ loadMaps: true })))
         .pipe(gulpIf(isDevEnvironment, sourcemaps.write()))
         .pipe(dest('dist'));
 
       src(SOURCE_FILES, { read: false })
-        .pipe(tap(file => {
-          file.contents = browserify(file.path, { debug: isDevEnvironment })
-            .bundle();
-        }))
+        .pipe(
+          tap((file) => {
+            file.contents = browserify(file.path, { debug: isDevEnvironment }).bundle();
+          }),
+        )
         .pipe(buffer())
         .pipe(translate(file.path))
         .pipe(gulpIf(isDevEnvironment, sourcemaps.init({ loadMaps: true })))
-        .pipe(minify({
-          ext: {
-            src: '.src.js',
-            min: '.js'
-          }
-        }))
+        .pipe(
+          minify({
+            ext: {
+              src: '.src.js',
+              min: '.js',
+            },
+          }),
+        )
         .pipe(gulpIf(isDevEnvironment, sourcemaps.write()))
         .pipe(rename({ suffix: langcode }))
         .pipe(dest('dist'))
         .once('end', callback);
-    }));
+    }),
+  );
 }
 
 exports.html = html;

@@ -9,7 +9,7 @@ const esprima = require('esprima');
 const Handlebars = require('@handlebars/parser');
 
 const viewsFiles = listFiles(path.join(__dirname, '..', 'views'));
-const jsFiles = listFiles(path.join(__dirname, '..', 'public')).filter(e => e.endsWith('.js'));
+const jsFiles = listFiles(path.join(__dirname, '..', 'public')).filter((e) => e.endsWith('.js'));
 
 let stringCount = 0;
 
@@ -17,7 +17,7 @@ const TRANSLATOR_COMMENT_REGEX = /^\s*translator:\s?(.*)$/i;
 
 const poFile = new PO();
 poFile.headers['Project-Id-Version'] = 'Pxls';
-poFile.headers['POT-Creation-Date'] = (new Date()).toISOString();
+poFile.headers['POT-Creation-Date'] = new Date().toISOString();
 // "Better written as…" no it's not - look at the context.
 /* eslint-disable-next-line dot-notation */
 poFile.headers['Language'] = '';
@@ -67,34 +67,32 @@ for (const jsPath of jsFiles) {
   const translatableStrings = script.body
     .map(findTranslationCalls)
     .flat()
-    .map(e => e.arguments[0].range);
+    .map((e) => e.arguments[0].range);
 
   for (const [start, end] of translatableStrings) {
-    const relevantComments = script.comments.filter(comment => {
-      const [commentStart, commentEnd] = comment.range;
+    const relevantComments = script.comments
+      .filter((comment) => {
+        const [commentStart, commentEnd] = comment.range;
 
-      if (!TRANSLATOR_COMMENT_REGEX.test(comment.value)) {
-        return false;
-      }
+        if (!TRANSLATOR_COMMENT_REGEX.test(comment.value)) {
+          return false;
+        }
 
-      if (commentEnd < start) {
-        // before string
+        if (commentEnd < start) {
+          // before string
 
-        const newlineCount = Array.from(file
-          .substring(commentEnd, start)
-          .matchAll('\n')).length;
+          const newlineCount = Array.from(file.substring(commentEnd, start).matchAll('\n')).length;
 
-        return newlineCount < 2;
-      } else {
-        // after string
+          return newlineCount < 2;
+        } else {
+          // after string
 
-        const hasNewline = file
-          .substring(end, commentStart)
-          .indexOf('\n') !== -1;
+          const hasNewline = file.substring(end, commentStart).indexOf('\n') !== -1;
 
-        return !hasNewline;
-      }
-    }).map(comment => TRANSLATOR_COMMENT_REGEX.exec(comment.value)[1]);
+          return !hasNewline;
+        }
+      })
+      .map((comment) => TRANSLATOR_COMMENT_REGEX.exec(comment.value)[1]);
 
     const id = contract(file.substring(start, end), 1);
 
@@ -126,7 +124,7 @@ for (const item of poItems.values()) {
 }
 
 const outPath = path.join(__dirname, '..', 'po', 'Localization.pot');
-poFile.save(outPath, e => e ? console.error : null);
+poFile.save(outPath, (e) => (e ? console.error : null));
 
 console.info(`Parsed ${viewsFiles.length + jsFiles.length} files.`);
 console.info(`${stringCount} strings found.`);
