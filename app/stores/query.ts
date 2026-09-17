@@ -41,7 +41,7 @@ export const useQueryStore = defineStore('query', () => {
     }
 
     if (fromEvent) {
-      for (const key of Object.keys(params).filter((key) => !keys.includes(key))) {
+      for (const key of Object.keys(params).filter((name) => !keys.includes(name))) {
         remove(key);
       }
     }

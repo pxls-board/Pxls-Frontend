@@ -18,6 +18,10 @@
     "unicorn/no-array-for-each": "off",
     "unicorn/consistent-function-scoping": "off",
     "import/no-unassigned-import": "off",
+    "import/no-named-as-default": "off",
+    "import/default": "off",
+    "unicorn/require-post-message-target-origin": "off",
+    "no-underscore-dangle": ["error", { "allow": ["__"] }],
     "vue/no-multiple-slot-args": "error"
   },
   "ignorePatterns": ["app/vendor/**", "public/**", ".nuxt/**", ".output/**", "node_modules/**"]

@@ -21,7 +21,9 @@ let picker: EmojiPicker | null = null;
 
 async function getPicker() {
   if (picker) return picker;
-  await import('~/vendor/emoji-button.min.js');
+  // UMD: sets `window.EmojiButton` as an ES module (dev), exports it when bundled.
+  const bundled = (await import('~/vendor/emoji-button.min.js')) as { default?: Window['EmojiButton'] };
+  window.EmojiButton ??= bundled.default;
   const options: Record<string, unknown> = {
     position: 'left-start',
     style: 'twemoji',

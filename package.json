@@ -31,7 +31,7 @@
     "@vueuse/core": "^15.0.0",
     "crel": "^4.2.1",
     "httpxy": "^0.5.5",
-    "jquery": "^4.0.0",
+    "jquery": "^3.7.1",
     "mitt": "^3.0.1",
     "nuxt": "^4.5.2",
     "pinia": "^4.0.3",
@@ -49,5 +49,9 @@
     "oxlint": "^1.83.0",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.11"
-  }
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "packageManager": "pnpm@12.4.1"
 }

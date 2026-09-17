@@ -1,1825 +1,2394 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2025-08-03T22:45:06.512Z\n"
+"POT-Creation-Date: 2026-09-17T17:48:58.033Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
-#: /views/error.handlebars
-#: /views/error.handlebars
-#: /views/error.handlebars
-#: /views/profile.handlebars
-#: /public/include/user.js
-msgid "My Profile"
+#: /app/api/pxls.ts /app/stores/ui.ts
+msgid "Alert"
 msgstr ""
 
-#: /views/error.handlebars
-#: /views/profile.handlebars
-msgid "My Factions"
-msgstr ""
-
-#. HTTP status code name
-#: /views/error.handlebars
-msgid "Not Found"
-msgstr ""
-
-#: /views/error.handlebars
-msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
-msgstr ""
-
-#. links to the homepage (the app itself)
-#: /views/error.handlebars
-#: /views/error.handlebars
-#: /views/error.handlebars
-msgid "Back to Pxls"
-msgstr ""
-
-#. HTTP status code name
-#: /views/error.handlebars
-msgid "Not Authenticated"
-msgstr ""
-
-#: /views/error.handlebars
-msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
-msgstr ""
-
-#. HTTP status code name
-#: /views/error.handlebars
-msgid "Not Allowed"
-msgstr ""
-
-#: /views/error.handlebars
-msgid "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Place pixels with people to create art"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Lost connection to server, reconnecting..."
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Loading Heatmap (press <kbd>H</kbd> to cancel)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Loading Virginmap (press <kbd>X</kbd> to cancel)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Logout"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Canvas:"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-#: /views/index.handlebars
-#: /views/index.handlebars
+#: /app/components/board/PlaceCursor.vue /app/components/hud/HudBubble.vue
 msgid "N/A"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "All Time:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Loading online user count&hellip;"
-msgstr ""
-
-#: /views/index.handlebars
-#: /public/admin/admin.js
-#: /public/include/lookup.js
-msgid "Pixels"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Undo"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "You are not signed in."
-msgstr ""
-
-#: /views/index.handlebars
-#: /public/include/user.js
-msgid "Sign in with..."
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Loading..."
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "Sign up"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Pick a username"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Username:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Discord Tag (Optional):"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Drag and drop template image"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Exit"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/profile.handlebars
-msgid "Info"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "Close Panel"
-msgstr ""
-
-#: /views/index.handlebars
-#: /public/include/chat.js
-msgid "Chat"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Pings"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "Settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Jump To Bottom"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Replying to"
-msgstr ""
-
-#: /views/index.handlebars
-#: /public/include/chat.js
-msgid "On"
-msgstr ""
-
-#: /views/index.handlebars
+#: /app/components/chat/ChatEmojiButton.vue
 msgid "Emoji"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "Search"
+#: /app/components/chat/ChatMessage.vue /app/components/modals/ChatbanModal.vue
+msgid "none provided"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "keybinds;keys;keyboard;hotkeys"
+#: /app/components/chat/ChatMessage.vue
+msgid "Purged by ${purge.initiator} with reason: ${reason}"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "Keybinds"
+#: /app/components/chat/ChatMessage.vue /app/components/chat/ChatUserPopup.vue
+msgid "Reply"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "general"
+#: /app/components/chat/ChatPingsPopup.vue
+msgid "Pings"
 msgstr ""
 
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "General"
+#: /app/components/chat/ChatPingsPopup.vue
+msgid "No Results"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "move;moving;panning;drag"
+#: /app/components/chat/ChatUserPopup.vue /app/components/hud/LookupPopup.vue /app/components/modals/ChatReportModal.vue /app/components/modals/PixelReportModal.vue
+msgid "Report"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "Mouse/arrows/wasd to pan"
+#: /app/components/chat/ChatUserPopup.vue
+msgid "Mention"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "mousewheel;zooming"
+#: /app/components/chat/ChatUserPopup.vue
+msgid "Ignore"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "Scroll/pinch to zoom"
+#: /app/components/chat/ChatUserPopup.vue /public/admin/admin.js
+msgid "Profile"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "scroll;zooming"
+#: /app/components/chat/ChatUserPopup.vue
+msgid "Chat (un)ban"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom"
+#: /app/components/chat/ChatUserPopup.vue /app/stores/chat.ts
+msgid "Purge User"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "lookups"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>G</kbd> to toggle grid"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "close;information shown;information hidden;info shown;info hidden;hide information;show information"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>I</kbd> to open info"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "close;settings hidden;settings shown;hide settings;show settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>T</kbd> to open settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "close;chat hidden;chat shown;hide chat;show chat"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>B</kbd> to open chat"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "canvas locked;move;moving;zoom;zooming"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>L</kbd> to toggle locking panning of the canvas"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "take screenshot;image;download;picture;canvas"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>P</kbd> to take a snapshot"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>H</kbd> to toggle heatmap"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>X</kbd> to toggle virginmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "overlays;user activity;pixels placed pixels;wipe;clean;"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>O</kbd> to clear heatmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "overlays;user activity;pixels unplaced pixels;wipe;clean;"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>U</kbd> to clear virginmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "next color;previous color"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "current coordinates;coords"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>C</kbd> to copy link of moused-over coordinates"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "cancel selection"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>ESC</kbd> to deselect current pixel"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "recenter;jump;center on template;guides;focus"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>R</kbd> to center the board on the current template"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "templates;guides"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "Template"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "transparency"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>Page Up</kbd> to increase opacity"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>Page Down</kbd> to decrease opacity"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "hidden;shown;hide;show"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "<kbd>V</kbd> to toggle visibility"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to the same position on a QWERTY keyboard."
-msgstr ""
-
-#: /views/index.handlebars
-msgid "templates;overlays;guides"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "templates;overlays;image;pixel art"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "template enabled;template disabled;show template;hide template;template shown;template hidden"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Use template"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "template title;template name;tab name;tab title;title="
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Title:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "template location source;template source URL;template URL;template="
-msgstr ""
-
-#: /views/index.handlebars
-msgid "URL:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "template position;template x;template y;template location; template vertical; template horizontal;ox=;oy="
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Horizontal position:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Vertical position:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "template width;tw="
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Width:"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "Reset"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "template style;custom template"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Style:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Use Source Style"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "1-to-1"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "1-to-1 (keep incorrect colors)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Dotted (Small, 1:2)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Dotted (Big, 2:2)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Symbols"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Numbers"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Custom…"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "template style source;template style URL;custom style URL;custom template"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Custom style URL:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "template conversion;template palette conversion;convert to palette"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Color Conversion Mode:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Unconverted"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Nearest Custom"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "template transparency;template opacity;oo="
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Opacity:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "ui;interface"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "UI Settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "language override;text"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Language override:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Use Browser Language"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "English"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Bulgarian"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "French"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "German"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Russian"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Swedish"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Finnish"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Toki Pona"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "themes;look;stylesheets;visuals"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Theme:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Default"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Show reticule"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "hide cursor;cursor shown;cursor hidden"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Show cursor"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "darkness filter"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable color brightness"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Warning: Known to cause fuzziness in Chrome on some Mac/Linux installs"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Color brightness:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "keep current selected;keep curent color;place"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Deselect color after placing"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "mousewheel;palette scrolling"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable scrolling on the palette to switch colors"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Invert scroll direction"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "indexed colors;palette indicies"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Add numbers to palette entries"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "scrollbar;palette scrolling"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable thin scrollbar"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "scrollbar;palette scrolling;palette stack"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable palette stacking"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "floating bubble location"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Bubble position:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Top left"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Top right"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Bottom left"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Bottom right"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "broken;offset workaround"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Attempt to fix canvas displacement bug in Chrome 78+"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "chat;message;ping sound"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Chat Settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "username;color;colour"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Username Color:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "chat message;chat ui"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Interface"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "enable;disable"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable chat"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Page must be reloaded after changing"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "chat size;chat font"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Font Size:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "time;timestamps"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "24 Hour Timestamps"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "badges;pixel count;pixels placed"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Show pixel-placed badges"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "badges;factions"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Show faction tags"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "template urls;template links;template name"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Replace template titles with URLs in chat where applicable"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "chat orientation;chat position"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable horizontal chat"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "banner;animation"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable the rotating banner under chat"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "max;messages;truncate"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Maximum amount of chat messages:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "link;url;behaviour"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Default internal link action click:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "link;url;behaviour;external;bypass;skip"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Skip external link popup"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Note: Has no effect if external link popups are disabled by the server."
-msgstr ""
-
-#: /views/index.handlebars
-msgid "chat icon;chat notifications;chat ping"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Chat icon badge mode:"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "Show on unread ping"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "Show on unread message"
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "Never show"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "chat icon;chat notifications;chat message"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Chat icon highlight mode:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "ignored;ignores;unignore;blocked;blocking;unblock"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Ignores"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "unignore;unblock"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Unignore"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "overlays;virginmap;heatmap;grid"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Overlay Settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "heatmap;heatmap opacity;clear heatmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Heatmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Turn on heatmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "(toggle with <kbd>H</kbd>)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "overlays;activity;pixels placed pixels;wipe;clean"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Clear heatmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "(hotkey: <kbd>O</kbd>)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "overlays;user activity;pixels placed pixels;transparency"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Heatmap background opacity:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "virginmap;virginmap opacity;clear virginmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Virginmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Turn on virginmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "(toggle with <kbd>X</kbd>)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "overlays;user activity;pixels unplaced pixels;transparency"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Virginmap background opacity:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "overlays;activity;pixels unplaced pixels;wipe;clean"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Clear virginmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "(hotkey: <kbd>U</kbd>)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Layer template underneath heatmap"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "grid;toggle grid"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Grid"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Turn on grid"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "(toggle with <kbd>G</kbd>)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "controls;zooming;panning;movement"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Control Settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "zooming;scrolling;scale;scaling"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Zooming"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "scrolling sensitivity;zooming sensitivity;mousewheel sensitivity"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Zoom sensitivity:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Minimum scale:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Maximum scale:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "rounding;zooming;scrolling;mousewheel;integer;decimal"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Round zoom values to nearest whole number"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "controls;miscellaneous"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Lock the canvas (disallow canvas drag/zoom with mouse/fingers)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "MMB picker;mouse picker;selection;palette picker"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable middle mouse button selecting color from board"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "right click action"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Right-click action:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Nothing"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Clear color"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Copy color"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Lookup"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Clear color + Lookup"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "snapshots;screenshot;download;picture;canvas"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Snapshot Settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "screenshot;snapshot;download;board;canvas"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "take screenshot;image;download format;picture;canvas;board"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Snapshot image format:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "PNG"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "JPEG"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "WEBP (Chrome only)"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "sound;notification;alert;notify;ping"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Sound and Notification Settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "audio;mute;noise;volume"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable sound"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "notifs;notify;pixel notification"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable pixel available notification"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "notification;pixel ready;alert"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Pixel Ready Notification"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "alert source;notify url;notify source;notification url;notification source"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Alert URL:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Update"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Test"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "sound level;audio level;mute audio;mute sound"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Volume:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "alert forewarning;alert delay; notification delay; notification forewarning"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Delay (seconds):"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "chat mentions;chat pings;chat sound"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Chat Pings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Enable pings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "mention sound"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Play sound on ping:"
-msgstr ""
-
-#: /views/index.handlebars
-#: /public/include/chat.js
-msgid "Off"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Only when necessary"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Always"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "mention sound volume"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Ping sound volume:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "personal account"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Account Settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Public Discord name:"
-msgstr ""
-
-#: /views/index.handlebars
-#: /public/include/chat.js
-msgid "Set"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Remove"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Help"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Notifications"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "FAQ"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Why is the cooldown as long as it is?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Why does it say 0/6 pixels?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Why does it take so long to \"stack\" pixels?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 20-30 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "How do I appeal a ban?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "How do I make a template?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Clueless."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "How do I move a template?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Does the canvas reset? When?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Where can I see the past canvases?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the <a href=\"https://archives.pxls.space\" target=\"_blank\">archives</a>, which records timelapses and a lot of useful information on each canvas."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "How do I see who placed a pixel?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "How do I report someone?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "How do I change the color of my name in the chat?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "There is a \"Username Color\" option near the bottom of the settings panel."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "What is a \"virginmap\"?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "How do I report bugs?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Submit bugs to the #dev-and-bugs forum in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs) or open a modmail by DMing pxls.mail#8384."
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "How do I get more info or contact staff?"
-msgstr ""
-
-#: /views/partials/faq.handlebars
-msgid "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Welcome!"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "The best place to reach staff and fellow community is in the discord!"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Canvas Rules"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No NSFW or NSFL content."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No nudity or otherwise sexually explicit content"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No sexual imagery/erotica"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No excessive blood or otherwise obscene/shocking content"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No auto-placement tools of any kind, you must place the pixels manually."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
-msgstr ""
-
-#: /views/partials/info.handlebars
-#: /views/partials/info.handlebars
-msgid "Staff have final say in any rule disputes"
-msgstr ""
-
-#: /views/partials/info.handlebars
-#: /views/partials/info.handlebars
-msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Chat Rules"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No hate speech. This includes emoji/symbols/ASCII art."
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Normal swearing/etc is allowed"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No spamming"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "This includes excessive ASCII art/emojis/symbols/whitespace"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No \"copy pasta\"s"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "No personal information"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Links"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Terms of Service"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Privacy Policy"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Discord (main hub)"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Twitter"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "GitHub (back end)"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "GitHub (front end)"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Single-player mode"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Statistics"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Profile (user info, factions, etc.)"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Wiki"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Generator, progress checker, and monitor for Pxls templates"
-msgstr ""
-
-#: /views/partials/info.handlebars
-#: /views/partials/info.handlebars
-#: /views/partials/info.handlebars
-msgid "Archives"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "PxlsFiddle (archives)"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Donate"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "Donations are not accepted at this time, but this panel will be updated when they're open again!"
-msgstr ""
-
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-msgid "{0}'s Profile"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "My Data"
-msgstr ""
-
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-msgid "Reports"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Factions"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Data"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "You must be logged in to view your profile."
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Registration Date"
-msgstr ""
-
-#: /views/profile.handlebars
-#: /public/include/lookup.js
-msgid "Alltime Pixels"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Current Canvas Pixels"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Discord Tag"
-msgstr ""
-
-#: /views/profile.handlebars
-#: /public/include/lookup.js
-msgid "Faction"
-msgstr ""
-
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-msgid "None"
-msgstr ""
-
-#: /views/profile.handlebars
-#: /public/admin/admin.js
-msgid "Roles"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Canvas Ban Expiry"
-msgstr ""
-
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-msgid "Never"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Chat Ban Expiry"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "View rankings and other stats <a href=\"/stats\">here</a>."
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "You must be logged in to view your reports."
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Canvas Reports ({0}/{1} open)"
-msgstr ""
-
-#. eg "Report on Bob (closed)
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-msgid "Report on {0} (closed)"
-msgstr ""
-
-#. eg "Report on Bob (open)
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-msgid "Report on {0} (open)"
-msgstr ""
-
-#. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-msgid "Reported {0} on {1}"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "There are no canvas reports to show."
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Chat Reports ({0}/{1} open)"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "There are no chat reports to show."
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "You must be logged in to manage your factions."
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "You must have at least {0} all-time pixels to create a faction."
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Create"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Join"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "This is your currently displayed faction."
-msgstr ""
-
-#. eg "Pixelers (members: 100, ID: 1)"
-#: /views/profile.handlebars
-msgid "{0} (members: {1}, ID: {2})"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Owner: {0}"
-msgstr ""
-
-#. makes the faction no longer the one displayed for the current user
-#: /views/profile.handlebars
-msgid "Remove Displayed"
-msgstr ""
-
-#. makes the faction the one displayed for the current user
-#: /views/profile.handlebars
-msgid "Set Displayed"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Members"
-msgstr ""
-
-#: /views/profile.handlebars
-msgid "Edit"
-msgstr ""
-
-#: /views/profile.handlebars
-#: /public/include/chat.js
+#: /app/components/chat/ChatUserPopup.vue /app/components/profile/ProfileFactions.vue
 msgid "Delete"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "Leave"
+#: /app/components/chat/ChatUserPopup.vue
+msgid "Mod Lookup"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "You are not in any factions yet!"
+#: /app/components/chat/ChatUserPopup.vue
+msgid "Chat Lookup"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "You must be logged in to view your data."
+#: /app/components/hud/DragDropOverlay.vue
+msgid "Cannot fetch local files. Use the file selector in template settings."
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "Log Keys"
+#: /app/components/hud/DragDropOverlay.vue
+msgid "Are you sure you want to redirect to the following URL?"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
+#: /app/components/hud/DragDropOverlay.vue
+msgid "Redirect Warning"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "You can see the public <a href=\"https://pxls.space/extra/logs/\" target=\"_blank\">Pxls Logs</a> to learn more."
+#: /app/components/hud/DragDropOverlay.vue
+msgid "Drag and dropped file must be a valid image."
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "Canvas Code"
+#: /app/components/hud/DragDropOverlay.vue /app/components/panels/SettingsPanel.vue
+msgid "Drag and drop template image"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "Log Key"
+#: /app/components/hud/DragDropOverlay.vue
+msgid "Exit"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "You have no log keys yet!"
+#: /app/components/hud/HudBottom.vue
+msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "Log keys should show up here after a canvas you have placed on ends."
+#: /app/components/hud/HudBottom.vue /public/admin/admin.js
+msgid "Rename Requested"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "Members of {0} ([{1}])"
+#: /app/components/hud/HudBottom.vue
+msgid "Undo"
 msgstr ""
 
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-#: /public/admin/admin.js
-#: /public/include/lookup.js
+#: /app/components/hud/HudBottom.vue
+msgid "You are not signed in."
+msgstr ""
+
+#: /app/components/hud/HudBottom.vue
+msgid "Sign in with {0}"
+msgstr ""
+
+#: /app/components/hud/HudBottom.vue /app/components/hud/SignInDialog.vue
+msgid "Sign in with..."
+msgstr ""
+
+#: /app/components/hud/HudBottom.vue
+msgid "You can contact us using one of the links in the info menu."
+msgstr ""
+
+#: /app/components/hud/HudBottom.vue
+msgid "You must change your username."
+msgstr ""
+
+#: /app/components/hud/HudBottom.vue
+msgid "Click here to continue."
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue
+msgid "Loading online user count&hellip;"
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue
+msgid "Sign Out"
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue
+msgid "Expand"
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue
+msgid "Collapse"
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue /app/components/profile/SiteNav.vue /app/error.vue
+msgid "My Profile"
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue
+msgid "Logout"
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue
+msgid "Canvas:"
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue
+msgid "All Time:"
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue
+msgid "Online:"
+msgstr ""
+
+#: /app/components/hud/HudBubble.vue /app/stores/lookup.ts /public/admin/admin.js
+msgid "Pixels"
+msgstr ""
+
+#: /app/components/hud/HudHeader.vue /app/components/panels/InfoPanel.vue /app/pages/profile/[[name]].vue
+msgid "Info"
+msgstr ""
+
+#. FAQ panel
+#: /app/components/hud/HudHeader.vue /app/components/panels/FaqPanel.vue
+msgid "Help"
+msgstr ""
+
+#: /app/components/hud/HudHeader.vue /app/components/panels/NotificationsPanel.vue
+msgid "Notifications"
+msgstr ""
+
+#: /app/components/hud/HudHeader.vue /app/components/panels/ChatPanel.vue /app/components/panels/SettingsPanel.vue
+msgid "Settings"
+msgstr ""
+
+#: /app/components/hud/HudHeader.vue /app/components/panels/ChatPanel.vue
+msgid "Chat"
+msgstr ""
+
+#: /app/components/hud/HudHeader.vue /app/components/panels/SettingsPanel.vue
+msgid "Lock the canvas (disallow canvas drag/zoom with mouse/fingers)"
+msgstr ""
+
+#: /app/components/hud/HudPalette.vue /app/components/panels/SettingsPanel.vue
+msgid "Clear color"
+msgstr ""
+
+#: /app/components/hud/LookupPopup.vue
+msgid "Report Pixel"
+msgstr ""
+
+#: /app/components/hud/LookupPopup.vue
+msgid "An error occurred, either you aren't logged in or you may be attempting to look up users too fast. Please try again in 60 seconds"
+msgstr ""
+
+#: /app/components/hud/LookupPopup.vue
+msgid "This pixel is background (was not placed by a user)."
+msgstr ""
+
+#: /app/components/hud/LookupPopup.vue
+msgid "Hide sensitive information"
+msgstr ""
+
+#: /app/components/hud/LookupPopup.vue
+msgid "Move Template Here"
+msgstr ""
+
+#: /app/components/hud/LookupPopup.vue /app/components/profile/FactionMembersModal.vue /app/components/profile/FactionSearchModal.vue /public/admin/admin.js
 msgid "Close"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "Faction Members"
+#: /app/components/hud/SignInDialog.vue
+msgid "New Accounts Disabled"
 msgstr ""
 
-#. This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list.
-#. since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list
-#: /views/profile.handlebars
-msgid "Transfer Ownership"
+#: /app/components/hud/SignInDialog.vue /app/components/modals/ChatReportModal.vue /app/components/modals/ChatbanModal.vue /app/components/modals/DeleteMessageModal.vue /app/components/modals/ExternalLinkModal.vue /app/components/modals/ForceRenameModal.vue /app/components/modals/PixelReportModal.vue /app/components/modals/PurgeUserModal.vue /app/components/modals/RequestRenameModal.vue /app/components/modals/TemplateLinkModal.vue /public/admin/admin.js
+msgid "Cancel"
 msgstr ""
 
-#. bans a user from the faction
-#: /views/profile.handlebars
-#: /public/include/chat.js
-msgid "Ban"
+#: /app/components/hud/SignupDialog.vue
+msgid "Sign up"
 msgstr ""
 
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-msgid "Nothing to see here!"
+#: /app/components/hud/SignupDialog.vue
+msgid "Pick a username"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "Faction Bans"
+#: /app/components/hud/SignupDialog.vue
+msgid "Username:"
 msgstr ""
 
-#: /views/profile.handlebars
-#: /public/admin/admin.js
-#: /public/include/chat.js
+#: /app/components/hud/SignupDialog.vue
+msgid "Discord Tag (Optional):"
+msgstr ""
+
+#: /app/components/modals/BanModal.vue
+msgid "If you think this was an error, please contact us using one of the links in the info tab."
+msgstr ""
+
+#: /app/components/modals/BanModal.vue
+msgid "Ban reason:"
+msgstr ""
+
+#: /app/components/modals/ChatReportModal.vue /app/components/modals/PixelReportModal.vue
+msgid "Sent report!"
+msgstr ""
+
+#: /app/components/modals/ChatReportModal.vue /app/components/modals/PixelReportModal.vue
+msgid "Error sending report."
+msgstr ""
+
+#: /app/components/modals/ChatReportModal.vue
+msgid "You are reporting a chat message from ${reportTarget} with the content:"
+msgstr ""
+
+#: /app/components/modals/ChatReportModal.vue
+msgid "Enter a reason for your report"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue /app/components/profile/FactionMembersModal.vue /public/admin/admin.js
 msgid "Unban"
 msgstr ""
 
-#: /views/profile.handlebars
-msgid "Find A Faction"
+#: /app/components/modals/ChatbanModal.vue
+msgid "Permanent"
 msgstr ""
 
-#: /views/profile.handlebars
+#: /app/components/modals/ChatbanModal.vue
+msgid "Temporary"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Custom"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Rule 3: Spam"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Rule 1: Chat civility"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Rule 2: Hate Speech"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Rule 5: NSFW"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Additional information:"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Chatban initiated"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Error occurred while chatbanning"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Banning:"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Message:"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Ban Length"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Reason"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Custom reason"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue /app/components/modals/PixelReportModal.vue /public/admin/admin.js
+msgid "Additional information (if applicable)"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Purge Messages"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue
+msgid "Purging all messages is disabled during snip mode"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue /app/components/modals/ConfirmModal.vue /public/admin/admin.js
+msgid "Yes"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue /app/components/modals/ConfirmModal.vue /public/admin/admin.js
+msgid "No"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue /app/components/modals/DeleteMessageModal.vue /app/components/modals/PurgeUserModal.vue
+msgid "Silent (no purge message)"
+msgstr ""
+
+#: /app/components/modals/ChatbanModal.vue /app/components/profile/FactionMembersModal.vue
+msgid "Ban"
+msgstr ""
+
+#: /app/components/modals/DeleteMessageModal.vue /app/stores/chat.ts
+msgid "Failed to delete"
+msgstr ""
+
+#: /app/components/modals/DeleteMessageModal.vue /app/components/modals/PurgeUserModal.vue
+msgid "ID: "
+msgstr ""
+
+#: /app/components/modals/DeleteMessageModal.vue /app/components/modals/PurgeUserModal.vue
+msgid "User: "
+msgstr ""
+
+#: /app/components/modals/DeleteMessageModal.vue /app/components/modals/PurgeUserModal.vue
+msgid "Message: "
+msgstr ""
+
+#: /app/components/modals/DeleteMessageModal.vue
+msgid "Reason: "
+msgstr ""
+
+#: /app/components/modals/ExternalLinkModal.vue
+msgid "This link is taking you to the following website:"
+msgstr ""
+
+#: /app/components/modals/ExternalLinkModal.vue
+msgid "The operators of this website have no responsibility or control over the contents hosted at {0}. Are you sure you want to go there?"
+msgstr ""
+
+#: /app/components/modals/ExternalLinkModal.vue
+msgid "Note: You can disable this popup in settings."
+msgstr ""
+
+#: /app/components/modals/ExternalLinkModal.vue
+msgid "Visit Site"
+msgstr ""
+
+#: /app/components/modals/ForceRenameModal.vue
+msgid "User renamed"
+msgstr ""
+
+#: /app/components/modals/ForceRenameModal.vue /app/components/modals/RequestRenameModal.vue
+msgid "An unknown error occurred. Please contact a developer"
+msgstr ""
+
+#: /app/components/modals/ForceRenameModal.vue
+msgid "Enter the new name for the user below. Please note that if you're trying to change the caps, you'll have to rename to something else first."
+msgstr ""
+
+#: /app/components/modals/ForceRenameModal.vue
+msgid "New Name: "
+msgstr ""
+
+#: /app/components/modals/ForceRenameModal.vue /app/components/modals/RequestRenameModal.vue /app/components/panels/SettingsPanel.vue
+msgid "Set"
+msgstr ""
+
+#: /app/components/modals/OpenFailedModal.vue
+msgid "Failed to automatically open in a new tab"
+msgstr ""
+
+#: /app/components/modals/OpenFailedModal.vue
+msgid "Click here to open in a new tab instead"
+msgstr ""
+
+#: /app/components/modals/PixelReportModal.vue /public/admin/admin.js
+msgid "Rule #1: Hateful/derogatory speech or symbols"
+msgstr ""
+
+#: /app/components/modals/PixelReportModal.vue /public/admin/admin.js
+msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
+msgstr ""
+
+#: /app/components/modals/PixelReportModal.vue /public/admin/admin.js
+msgid "Rule #3: Multi-account"
+msgstr ""
+
+#: /app/components/modals/PixelReportModal.vue /public/admin/admin.js
+msgid "Rule #4: Botting"
+msgstr ""
+
+#: /app/components/modals/PixelReportModal.vue /public/admin/admin.js
+msgid "Other (specify below)"
+msgstr ""
+
+#: /app/components/modals/PixelReportModal.vue /public/admin/admin.js
+msgid "You must specify the details."
+msgstr ""
+
+#: /app/components/modals/PixelReportModal.vue
+msgid "additional information:"
+msgstr ""
+
+#: /app/components/modals/PixelReportModal.vue
+msgid "Sending..."
+msgstr ""
+
+#: /app/components/modals/PurgeUserModal.vue
+msgid "User purged"
+msgstr ""
+
+#: /app/components/modals/PurgeUserModal.vue
+msgid "Error sending purge."
+msgstr ""
+
+#: /app/components/modals/PurgeUserModal.vue
+msgid "Selected Message"
+msgstr ""
+
+#: /app/components/modals/PurgeUserModal.vue
+msgid "Purge Reason"
+msgstr ""
+
+#: /app/components/modals/PurgeUserModal.vue
+msgid "Purge"
+msgstr ""
+
+#: /app/components/modals/RenameModal.vue
+msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
+msgstr ""
+
+#: /app/components/modals/RenameModal.vue
+msgid "If you disagree, please contact us on Discord (link in the info panel)."
+msgstr ""
+
+#: /app/components/modals/RenameModal.vue
+msgid "New Username:"
+msgstr ""
+
+#: /app/components/modals/RenameModal.vue
+msgid "Not now"
+msgstr ""
+
+#: /app/components/modals/RenameModal.vue
+msgid "Change"
+msgstr ""
+
+#: /app/components/modals/RequestRenameModal.vue
+msgid "Rename request updated"
+msgstr ""
+
+#: /app/components/modals/RequestRenameModal.vue
+msgid "Toggle Rename Request"
+msgstr ""
+
+#: /app/components/modals/RequestRenameModal.vue
+msgid "Select one of the options below to set the current rename request state."
+msgstr ""
+
+#: /app/components/modals/RequestRenameModal.vue /app/components/panels/ChatPanel.vue
+msgid "On"
+msgstr ""
+
+#: /app/components/modals/RequestRenameModal.vue /app/components/panels/ChatPanel.vue /app/components/panels/SettingsPanel.vue
+msgid "Off"
+msgstr ""
+
+#: /app/components/modals/TemplateLinkModal.vue /app/components/panels/SettingsPanel.vue
+msgid "Open in a new tab"
+msgstr ""
+
+#: /app/components/modals/TemplateLinkModal.vue /app/components/panels/SettingsPanel.vue
+msgid "Open in current tab (replacing template)"
+msgstr ""
+
+#: /app/components/modals/TemplateLinkModal.vue /app/components/panels/SettingsPanel.vue
+msgid "Jump to coordinates without replacing template"
+msgstr ""
+
+#: /app/components/modals/TemplateLinkModal.vue
+msgid "This link will overwrite your current template. What would you like to do?"
+msgstr ""
+
+#: /app/components/modals/TemplateLinkModal.vue
+msgid "Note: You can set a default action in the settings menu which bypasses this popup completely."
+msgstr ""
+
+#: /app/components/modals/TemplateLinkModal.vue
+msgid "OK"
+msgstr ""
+
+#: /app/components/panels/ChatPanel.vue
+msgid "Jump To Bottom"
+msgstr ""
+
+#: /app/components/panels/ChatPanel.vue
+msgid "Replying to"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Why is the cooldown as long as it is?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Why does it say 0/6 pixels?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Why does it take so long to \"stack\" pixels?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 20-30 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "How do I appeal a ban?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "How do I make a template?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Clueless."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "How do I move a template?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Does the canvas reset? When?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Where can I see the past canvases?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the <a href=\"https://archives.pxls.space\" target=\"_blank\">archives</a>, which records timelapses and a lot of useful information on each canvas."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "How do I see who placed a pixel?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "How do I report someone?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "How do I change the color of my name in the chat?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "There is a \"Username Color\" option near the bottom of the settings panel."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "What is a \"virginmap\"?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "How do I report bugs?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Submit bugs to the #dev-and-bugs forum in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs) or open a modmail by DMing pxls.mail#8384."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "How do I get more info or contact staff?"
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
+msgstr ""
+
+#: /app/components/panels/FaqPanel.vue
+msgid "FAQ"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No NSFW or NSFL content."
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No nudity or otherwise sexually explicit content"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No sexual imagery/erotica"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No excessive blood or otherwise obscene/shocking content"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No auto-placement tools of any kind, you must place the pixels manually."
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Staff have final say in any rule disputes"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No hate speech. This includes emoji/symbols/ASCII art."
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Normal swearing/etc is allowed"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No spamming"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "This includes excessive ASCII art/emojis/symbols/whitespace"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No \"copy pasta\"s"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "No personal information"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Terms of Service"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Privacy Policy"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Discord (main hub)"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Twitter"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Bluesky"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "GitHub (back end)"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "GitHub (front end)"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Single-player mode"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Statistics"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Profile (user info, factions, etc.)"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Wiki"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Archives"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Welcome!"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "The best place to reach staff and fellow community is in the discord!"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Canvas Rules"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Chat Rules"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Links"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Donate"
+msgstr ""
+
+#: /app/components/panels/InfoPanel.vue
+msgid "Donations are not accepted at this time, but this panel will be updated when they're open again!"
+msgstr ""
+
+#: /app/components/panels/NotificationsPanel.vue
+msgid "Expires ${expiry}"
+msgstr ""
+
+#: /app/components/panels/NotificationsPanel.vue
+msgid "Posted by ${notification.who}"
+msgstr ""
+
+#: /app/components/panels/PxlsPanel.vue
+msgid "Close Panel"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "move;moving;panning;drag"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Mouse/arrows/wasd to pan"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "mousewheel;zooming"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Scroll/pinch to zoom"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "scroll;zooming"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "lookups"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>G</kbd> to toggle grid"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "close;information shown;information hidden;info shown;info hidden;hide information;show information"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>I</kbd> to open info"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "close;settings hidden;settings shown;hide settings;show settings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>T</kbd> to open settings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "close;chat hidden;chat shown;hide chat;show chat"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>B</kbd> to open chat"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "canvas locked;move;moving;zoom;zooming"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>L</kbd> to toggle locking panning of the canvas"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "take screenshot;image;download;picture;canvas"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>P</kbd> to take a snapshot"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>H</kbd> to toggle heatmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>X</kbd> to toggle virginmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "overlays;user activity;pixels placed pixels;wipe;clean;"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>O</kbd> to clear heatmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "overlays;user activity;pixels unplaced pixels;wipe;clean;"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>U</kbd> to clear virginmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "next color;previous color"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "current coordinates;coords"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>C</kbd> to copy link of moused-over coordinates"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "cancel selection"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>ESC</kbd> to deselect current pixel"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "recenter;jump;center on template;guides;focus"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>R</kbd> to center the board on the current template"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "transparency"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>Page Up</kbd> to increase opacity"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>Page Down</kbd> to decrease opacity"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "hidden;shown;hide;show"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "<kbd>V</kbd> to toggle visibility"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "1-to-1"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "1-to-1 (keep incorrect colors)"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Dotted (Small, 1:2)"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Dotted (Big, 2:2)"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Symbols"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Numbers"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Use Source Style"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Custom…"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Unconverted"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Nearest Custom"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Use Browser Language"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Default"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Top left"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Top right"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Bottom left"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Bottom right"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue /app/components/profile/ProfileDetails.vue
+msgid "None"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Plusone"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Shake"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Shake & Plusone"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Bump"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Bump & Plusone"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Pulse"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Pulse & Plusone"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Pulse & Shake"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Pulse & Bump"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Ask"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Show on unread ping"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Show on unread message"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Never show"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Nothing"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Copy color"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Lookup"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Clear color + Lookup"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "PNG"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "JPEG"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "WEBP (Chrome only)"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Only when necessary"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Always"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Search"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Keybinds"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "keybinds;keys;keyboard;hotkeys"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "General"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "general"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Template"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "templates;guides"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to the same position on a QWERTY keyboard."
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "templates;overlays;guides"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "templates;overlays;image;pixel art"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "template enabled;template disabled;show template;hide template;template shown;template hidden"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Use template"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "template title;template name;tab name;tab title;title="
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Title:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "template location source;template source URL;template URL;template="
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "URL:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "template position;template x;template y;template location; template vertical; template horizontal;ox=;oy="
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Horizontal position:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Vertical position:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "template width;tw="
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Width:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Reset"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "template style;custom template"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Style:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "template style source;template style URL;custom style URL;custom template"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Custom style URL:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "template conversion;template palette conversion;convert to palette"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Color Conversion Mode:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Opacity:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "template transparency;template opacity;oo="
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "UI Settings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "ui;interface"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Language override:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "language override;text"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Theme:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "themes;look;stylesheets;visuals"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Show reticule"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Show cursor"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "hide cursor;cursor shown;cursor hidden"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable color brightness"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "darkness filter"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Warning: Known to cause fuzziness in Chrome on some Mac/Linux installs"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Color brightness:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Deselect color after placing"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "keep current selected;keep curent color;place"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable scrolling on the palette to switch colors"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "mousewheel;palette scrolling"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Invert scroll direction"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Add numbers to palette entries"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "indexed colors;palette indicies"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable thin scrollbar"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "scrollbar;palette scrolling"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable palette stacking"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "scrollbar;palette scrolling;palette stack"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Bubble position:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "floating bubble location"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Bubble animation:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "floating bubble animation"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Attempt to fix canvas displacement bug in Chrome 78+"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "broken;offset workaround"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Chat Settings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "chat;message;ping sound"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "username;color;colour"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Username Color:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Interface"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "chat message;chat ui"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable chat"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "enable;disable"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Page must be reloaded after changing"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Font Size:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "chat size;chat font"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "24 Hour Timestamps"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "time;timestamps"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Show pixel-placed badges"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "badges;pixel count;pixels placed"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Show faction tags"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "badges;factions"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Replace template titles with URLs in chat where applicable"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "template urls;template links;template name"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable horizontal chat"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "chat orientation;chat position"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable the rotating banner under chat"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "banner;animation"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Maximum amount of chat messages:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "max;messages;truncate"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Default internal link action click:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "link;url;behaviour"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Skip external link popup"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "link;url;behaviour;external;bypass;skip"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Note: Has no effect if external link popups are disabled by the server."
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Chat icon badge mode:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "chat icon;chat notifications;chat ping"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Chat icon highlight mode:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "chat icon;chat notifications;chat message"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Ignores"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "ignored;ignores;unignore;blocked;blocking;unblock"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "unignore;unblock"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Unignore"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Overlay Settings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "overlays;virginmap;heatmap;grid"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Heatmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "heatmap;heatmap opacity;clear heatmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Turn on heatmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "(toggle with <kbd>H</kbd>)"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "overlays;activity;pixels placed pixels;wipe;clean"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Clear heatmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "(hotkey: <kbd>O</kbd>)"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Heatmap background opacity:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "overlays;user activity;pixels placed pixels;transparency"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Virginmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "virginmap;virginmap opacity;clear virginmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Turn on virginmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "(toggle with <kbd>X</kbd>)"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Virginmap background opacity:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "overlays;user activity;pixels unplaced pixels;transparency"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "overlays;activity;pixels unplaced pixels;wipe;clean"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Clear virginmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "(hotkey: <kbd>U</kbd>)"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Layer template underneath heatmap"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Grid"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "grid;toggle grid"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Turn on grid"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "(toggle with <kbd>G</kbd>)"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Control Settings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "controls;zooming;panning;movement"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Zooming"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "zooming;scrolling;scale;scaling"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Zoom sensitivity:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "scrolling sensitivity;zooming sensitivity;mousewheel sensitivity"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Minimum scale:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Maximum scale:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Round zoom values to nearest whole number"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "rounding;zooming;scrolling;mousewheel;integer;decimal"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "controls;miscellaneous"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable middle mouse button selecting color from board"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "MMB picker;mouse picker;selection;palette picker"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Right-click action:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "right click action"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Snapshot Settings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "snapshots;screenshot;download;picture;canvas"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Snapshot image format:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "take screenshot;image;download format;picture;canvas;board"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Sound and Notification Settings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "sound;notification;alert;notify;ping"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable sound"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "audio;mute;noise;volume"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable pixel available notification"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "notifs;notify;pixel notification"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Pixel Ready Notification"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "notification;pixel ready;alert"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Alert URL:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "alert source;notify url;notify source;notification url;notification source"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Update"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Test"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Volume:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "sound level;audio level;mute audio;mute sound"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Delay (seconds):"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "alert forewarning;alert delay; notification delay; notification forewarning"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Chat Pings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "chat mentions;chat pings;chat sound"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Enable pings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Play sound on ping:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "mention sound"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Ping sound volume:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "mention sound volume"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Account Settings"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "personal account"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Public Discord name:"
+msgstr ""
+
+#: /app/components/panels/SettingsPanel.vue
+msgid "Remove"
+msgstr ""
+
+#: /app/components/profile/FactionMembersModal.vue
+msgid "Faction Members"
+msgstr ""
+
+#: /app/components/profile/FactionMembersModal.vue
+msgid "Transfer Ownership"
+msgstr ""
+
+#: /app/components/profile/FactionMembersModal.vue
+msgid "Nothing to see here!"
+msgstr ""
+
+#: /app/components/profile/FactionMembersModal.vue
+msgid "Faction Bans"
+msgstr ""
+
+#: /app/components/profile/FactionSearchModal.vue
 msgid "Search:"
 msgstr ""
 
-#: /views/profile.handlebars
+#: /app/components/profile/FactionSearchModal.vue
 msgid "Enter a search term to get started."
 msgstr ""
 
-#: /views/profile.handlebars
+#: /app/components/profile/FactionSearchModal.vue
 msgid "Load More"
+msgstr ""
+
+#: /app/components/profile/ProfileDetails.vue
+msgid "Registration Date"
+msgstr ""
+
+#: /app/components/profile/ProfileDetails.vue /app/stores/lookup.ts
+msgid "Alltime Pixels"
+msgstr ""
+
+#: /app/components/profile/ProfileDetails.vue
+msgid "Current Canvas Pixels"
+msgstr ""
+
+#: /app/components/profile/ProfileDetails.vue
+msgid "Discord Tag"
+msgstr ""
+
+#: /app/components/profile/ProfileDetails.vue /app/stores/lookup.ts
+msgid "Faction"
+msgstr ""
+
+#: /app/components/profile/ProfileDetails.vue /public/admin/admin.js
+msgid "Roles"
+msgstr ""
+
+#: /app/components/profile/ProfileDetails.vue
+msgid "Canvas Ban Expiry"
+msgstr ""
+
+#: /app/components/profile/ProfileDetails.vue
+msgid "Never"
+msgstr ""
+
+#: /app/components/profile/ProfileDetails.vue
+msgid "Chat Ban Expiry"
+msgstr ""
+
+#: /app/components/profile/ProfileDetails.vue
+msgid "View rankings and other stats <a href=\"/stats\">here</a>."
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "Members of {0} ([{1}])"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "Find A Faction"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "You must have at least {0} all-time pixels to create a faction."
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "Create"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "Join"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "This is your currently displayed faction."
+msgstr ""
+
+#. e.g. "Pixelers (members: 100, ID: 1)"
+#: /app/components/profile/ProfileFactions.vue
+msgid "{0} (members: {1}, ID: {2})"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "Owner: {0}"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "Remove Displayed"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "Set Displayed"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "Members"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "Edit"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "Leave"
+msgstr ""
+
+#: /app/components/profile/ProfileFactions.vue
+msgid "You are not in any factions yet!"
+msgstr ""
+
+#: /app/components/profile/ProfileLogKeys.vue
+msgid "Log Keys"
+msgstr ""
+
+#: /app/components/profile/ProfileLogKeys.vue
+msgid "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
+msgstr ""
+
+#: /app/components/profile/ProfileLogKeys.vue
+msgid "You can see the public <a href=\"https://pxls.space/extra/logs/\" target=\"_blank\">Pxls Logs</a> to learn more."
+msgstr ""
+
+#: /app/components/profile/ProfileLogKeys.vue
+msgid "Canvas Code"
+msgstr ""
+
+#: /app/components/profile/ProfileLogKeys.vue
+msgid "Log Key"
+msgstr ""
+
+#: /app/components/profile/ProfileLogKeys.vue
+msgid "You have no log keys yet!"
+msgstr ""
+
+#: /app/components/profile/ProfileLogKeys.vue
+msgid "Log keys should show up here after a canvas you have placed on ends."
+msgstr ""
+
+#: /app/components/profile/ProfileReports.vue
+msgid "Canvas Reports ({0}/{1} open)"
+msgstr ""
+
+#: /app/components/profile/ProfileReports.vue
+msgid "There are no canvas reports to show."
+msgstr ""
+
+#: /app/components/profile/ProfileReports.vue
+msgid "Chat Reports ({0}/{1} open)"
+msgstr ""
+
+#: /app/components/profile/ProfileReports.vue
+msgid "There are no chat reports to show."
+msgstr ""
+
+#. e.g. "Report on Bob (open)"
+#: /app/components/profile/ProfileReports.vue
+msgid "Report on {0} (closed)"
+msgstr ""
+
+#. e.g. "Report on Bob (open)"
+#: /app/components/profile/ProfileReports.vue
+msgid "Report on {0} (open)"
+msgstr ""
+
+#. e.g. "Reported Bob on Jan 1, 1970, 00:00:00 AM"
+#: /app/components/profile/ProfileReports.vue
+msgid "Reported {0} on {1}"
+msgstr ""
+
+#: /app/components/profile/ProfileReports.vue /app/pages/profile/[[name]].vue
+msgid "Reports"
+msgstr ""
+
+#: /app/components/profile/SiteNav.vue
+msgid "My Factions"
+msgstr ""
+
+#: /app/components/profile/SiteNav.vue
+msgid "My Data"
+msgstr ""
+
+#: /app/error.vue
+msgid "Not Found"
+msgstr ""
+
+#: /app/error.vue
+msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
+msgstr ""
+
+#: /app/error.vue
+msgid "Not Authenticated"
+msgstr ""
+
+#: /app/error.vue
+msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
+msgstr ""
+
+#: /app/error.vue
+msgid "Not Allowed"
+msgstr ""
+
+#: /app/error.vue
+msgid "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
+msgstr ""
+
+#: /app/error.vue
+msgid "Back to Pxls"
+msgstr ""
+
+#: /app/pages/index.vue
+msgid "Place pixels with people to create art"
+msgstr ""
+
+#: /app/pages/index.vue
+msgid "Lost connection to server, reconnecting..."
+msgstr ""
+
+#: /app/pages/index.vue
+msgid "Loading Heatmap (press <kbd>H</kbd> to cancel)"
+msgstr ""
+
+#: /app/pages/index.vue
+msgid "Loading Virginmap (press <kbd>X</kbd> to cancel)"
+msgstr ""
+
+#: /app/pages/index.vue
+msgid "Loading..."
+msgstr ""
+
+#: /app/pages/profile/[[name]].vue
+msgid "{0}'s Profile"
+msgstr ""
+
+#: /app/pages/profile/[[name]].vue
+msgid "Factions"
+msgstr ""
+
+#: /app/pages/profile/[[name]].vue
+msgid "Data"
+msgstr ""
+
+#. Snapshot save name
+#: /app/stores/board.ts
+msgid "pxls canvas"
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "You must be logged in to chat."
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "You cannot use chat while canvas banned."
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "Please upload your template image to a third-party image host."
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "You must have at least "
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid " pixels to send links."
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "External Link"
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "template:"
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "Open Template"
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "Open Failed"
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "Report User"
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "User ignored. You can unignore from chat settings."
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "Failed to ignore user. Either they're already ignored, or an error occurred. If the problem persists, contact a developer."
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "Chatban"
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "Delete Message"
+msgstr ""
+
+#: /app/stores/chat.ts
+msgid "Force Rename"
+msgstr ""
+
+#: /app/stores/lookup.ts
+msgid "Coords"
+msgstr ""
+
+#: /app/stores/lookup.ts /public/admin/admin.js
+msgid "Username"
+msgstr ""
+
+#: /app/stores/lookup.ts
+msgid "View Profile"
+msgstr ""
+
+#: /app/stores/lookup.ts
+msgid "Origin"
+msgstr ""
+
+#: /app/stores/lookup.ts
+msgid "Part of a nuke"
+msgstr ""
+
+#: /app/stores/lookup.ts
+msgid "Placed by a staff member using placement overrides"
+msgstr ""
+
+#: /app/stores/lookup.ts
+msgid "Time"
+msgstr ""
+
+#: /app/stores/lookup.ts
+msgid "Discord"
+msgstr ""
+
+#: /app/stores/lookup.ts
+msgid "just now"
+msgstr ""
+
+#: /app/stores/lookup.ts
+msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
+msgstr ""
+
+#: /app/stores/place.ts
+msgid "Failed captcha verification"
+msgstr ""
+
+#: /app/stores/template.ts
+msgid "There was an error getting the image"
+msgstr ""
+
+#: /app/stores/timer.ts
+msgid "Your next pixel will be available in ${delay} seconds!"
+msgstr ""
+
+#: /app/stores/timer.ts
+msgid "Your next pixel has been available for ${alertDelay} seconds!"
+msgstr ""
+
+#: /app/stores/timer.ts
+msgid "Your next pixel is available!"
+msgstr ""
+
+#: /app/stores/timer.ts
+msgid "Failed to update audio src, using default sound."
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Dark"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Darker"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Blue"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Purple"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Green"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Matte"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Terminal"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Red"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Synthwave"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Pink"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Blurple (Discord)"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Discord name is not valid."
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Discord name updated successfully"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Discord name reset successfully"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Couldn't change discord name: "
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "Error"
+msgstr ""
+
+#: /app/stores/ui.ts
+msgid "A new ${type} report has been received."
+msgstr ""
+
+#: /app/stores/user.ts
+msgid "An unknown error occurred. Please contact staff on discord"
+msgstr ""
+
+#: /app/stores/user.ts
+msgid "You are permanently banned."
+msgstr ""
+
+#: /app/stores/user.ts
+msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
+msgstr ""
+
+#: /app/stores/user.ts /public/admin/admin.js
+msgid "Banned"
+msgstr ""
+
+#: /i18n/locales.ts
+msgid "English"
+msgstr ""
+
+#: /i18n/locales.ts
+msgid "Bulgarian"
+msgstr ""
+
+#: /i18n/locales.ts
+msgid "French"
+msgstr ""
+
+#: /i18n/locales.ts
+msgid "German"
+msgstr ""
+
+#: /i18n/locales.ts
+msgid "Latvian"
+msgstr ""
+
+#: /i18n/locales.ts
+msgid "Russian"
+msgstr ""
+
+#: /i18n/locales.ts
+msgid "Swedish"
+msgstr ""
+
+#: /i18n/locales.ts
+msgid "Finnish"
+msgstr ""
+
+#: /i18n/locales.ts
+msgid "Toki Pona"
 msgstr ""
 
 #: /public/admin/admin.js
 msgid "Send alert..."
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/lookup.js
-msgid "Rule #1: Hateful/derogatory speech or symbols"
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/lookup.js
-msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/lookup.js
-msgid "Rule #3: Multi-account"
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/lookup.js
-msgid "Rule #4: Botting"
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/lookup.js
-msgid "Other (specify below)"
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/chat.js
-#: /public/include/lookup.js
-msgid "Additional information (if applicable)"
 msgstr ""
 
 #. "Revert pixels of the last *n* hours", part before 'n'
@@ -1830,11 +2399,6 @@ msgstr ""
 #. "Revert pixels of the last *n* hours", part after 'n'
 #: /public/admin/admin.js
 msgid " hours"
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/lookup.js
-msgid "You must specify the details."
 msgstr ""
 
 #: /public/admin/admin.js
@@ -1883,31 +2447,7 @@ msgid "permanent"
 msgstr ""
 
 #: /public/admin/admin.js
-#: /public/include/chat.js
-#: /public/include/uiHelper.js
-#: /public/include/user.js
-msgid "Yes"
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/chat.js
-#: /public/include/uiHelper.js
-#: /public/include/user.js
-msgid "No"
-msgstr ""
-
-#: /public/admin/admin.js
 msgid "Yes (permanent)"
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/lookup.js
-msgid "Username"
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/chat.js
-msgid "Profile"
 msgstr ""
 
 #: /public/admin/admin.js
@@ -1919,17 +2459,7 @@ msgid "All Time Pixels"
 msgstr ""
 
 #: /public/admin/admin.js
-#: /public/include/user.js
-msgid "Rename Requested"
-msgstr ""
-
-#: /public/admin/admin.js
 msgid "Discord Name"
-msgstr ""
-
-#: /public/admin/admin.js
-#: /public/include/user.js
-msgid "Banned"
 msgstr ""
 
 #: /public/admin/admin.js
@@ -1989,13 +2519,6 @@ msgstr ""
 msgid "Unbanning ${username}"
 msgstr ""
 
-#: /public/admin/admin.js
-#: /public/include/chat.js
-#: /public/include/lookup.js
-#: /public/include/user.js
-msgid "Cancel"
-msgstr ""
-
 #. Moderator panel label
 #: /public/admin/admin.js
 msgid "MOD"
@@ -2043,581 +2566,4 @@ msgstr ""
 
 #: /public/admin/admin.js
 msgid "More..."
-msgstr ""
-
-#. Snapshot save name
-#: /public/include/board.js
-msgid "pxls canvas"
-msgstr ""
-
-#. template link action
-#: /public/include/chat.js
-msgid "Ask"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Open in a new tab"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Open in current tab (replacing template)"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Jump to coordinates without replacing template"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Please upload your template image to a third-party image host."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "You must have at least "
-msgstr ""
-
-#: /public/include/chat.js
-msgid " pixels to send links."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "You must be logged in to chat."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "No Results"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Reply"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "none provided"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Purged by ${purge.initiator} with reason: ${reason}"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "External Link"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "This link is taking you to the following website:"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "The operators of this website have no responsibility or control over the contents hosted at {0}. Are you sure you want to go there?"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Note: You can disable this popup in settings."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Visit Site"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "template:"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Open Failed"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Failed to automatically open in a new tab"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Click here to open in a new tab instead"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Open Template"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "This link will overwrite your current template. What would you like to do?"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Note: You can set a default action in the settings menu which bypasses this popup completely."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "OK"
-msgstr ""
-
-#: /public/include/chat.js
-#: /public/include/lookup.js
-msgid "Report"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Mention"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Ignore"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Chat (un)ban"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Purge User"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Mod Lookup"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Chat Lookup"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Enter a reason for your report"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "You are reporting a chat message from ${reportTarget} with the content:"
-msgstr ""
-
-#: /public/include/chat.js
-#: /public/include/lookup.js
-msgid "Sent report!"
-msgstr ""
-
-#: /public/include/chat.js
-#: /public/include/lookup.js
-msgid "Error sending report."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Report User"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "User ignored. You can unignore from chat settings."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Failed to ignore user. Either they\\'re already ignored, or an error occurred. If the problem persists, contact a developer."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Permanent"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Temporary"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Rule 3: Spam"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Rule 1: Chat civility"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Rule 2: Hate Speech"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Rule 5: NSFW"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Custom"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Banning:"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Message:"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Ban Length"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Reason"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Purge Messages"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Purging all messages is disabled during snip mode"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Silent (no purge message)"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Custom reason"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Additional information:"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Chatban initiated"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Error occurred while chatbanning"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Chatban"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Failed to delete"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "ID: "
-msgstr ""
-
-#: /public/include/chat.js
-msgid "User: "
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Message: "
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Reason: "
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Delete Message"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Purge"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Selected Message"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Purge Reason"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "User purged"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Error sending purge."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Toggle Rename Request"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Select one of the options below to set the current rename request state."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Rename request updated"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "An unknown error occurred. Please contact a developer"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "New Name: "
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Enter the new name for the user below. Please note that if you\\'re trying to change the caps, you\\'ll have to rename to something else first."
-msgstr ""
-
-#: /public/include/chat.js
-msgid "User renamed"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "Force Rename"
-msgstr ""
-
-#: /public/include/chat.js
-msgid "You cannot use chat while canvas banned."
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "Sending..."
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "additional information:"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "Report Pixel"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "This pixel is background (was not placed by a user)."
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "Hide sensitive information"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "Move Template Here"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "An error occurred, either you aren't logged in or you may be attempting to look up users too fast. Please try again in 60 seconds"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "Coords"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "View Profile"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "Origin"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "Part of a nuke"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "Placed by a staff member using placement overrides"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "Time"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "just now"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
-msgstr ""
-
-#: /public/include/lookup.js
-msgid "Discord"
-msgstr ""
-
-#: /public/include/notifications.js
-msgid "Posted by ${notification.who}"
-msgstr ""
-
-#: /public/include/notifications.js
-msgid "Expires ${expiry}"
-msgstr ""
-
-#: /public/include/template.js
-msgid "There was an error getting the image"
-msgstr ""
-
-#: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr ""
-
-#: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr ""
-
-#: /public/include/timer.js
-msgid "Your next pixel is available!"
-msgstr ""
-
-#. theme name
-#: /public/include/uiHelper.js
-msgid "Dark"
-msgstr ""
-
-#. theme name
-#: /public/include/uiHelper.js
-msgid "Darker"
-msgstr ""
-
-#. theme name
-#: /public/include/uiHelper.js
-msgid "Blue"
-msgstr ""
-
-#. theme name
-#: /public/include/uiHelper.js
-msgid "Purple"
-msgstr ""
-
-#. theme name
-#: /public/include/uiHelper.js
-msgid "Green"
-msgstr ""
-
-#. theme name
-#: /public/include/uiHelper.js
-msgid "Matte"
-msgstr ""
-
-#. theme name
-#: /public/include/uiHelper.js
-msgid "Terminal"
-msgstr ""
-
-#. theme name
-#: /public/include/uiHelper.js
-msgid "Red"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "A new ${type} report has been received."
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Cannot fetch local files. Use the file selector in template settings."
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Redirect Warning"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Are you sure you want to redirect to the following URL?"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Drag and dropped file must be a valid image."
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Discord name must be a string."
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Wait, what - how did this happened?"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Discord name is not valid."
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Discord name updated successfully"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Discord name reset successfully"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Error"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Couldn\\'t change discord name: "
-msgstr ""
-
-#: /public/include/user.js
-msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
-msgstr ""
-
-#: /public/include/user.js
-msgid "Sign in with {0}"
-msgstr ""
-
-#: /public/include/user.js
-msgid "New Accounts Disabled"
-msgstr ""
-
-#: /public/include/user.js
-msgid "online"
-msgstr ""
-
-#: /public/include/user.js
-msgid "Sign Out"
-msgstr ""
-
-#: /public/include/user.js
-msgid "Are you sure you want to sign out?"
-msgstr ""
-
-#: /public/include/user.js
-msgid "You are permanently banned."
-msgstr ""
-
-#: /public/include/user.js
-msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
-msgstr ""
-
-#: /public/include/user.js
-msgid "You can contact us using one of the links in the info menu."
-msgstr ""
-
-#: /public/include/user.js
-msgid "If you think this was an error, please contact us using one of the links in the info tab."
-msgstr ""
-
-#: /public/include/user.js
-msgid "Ban reason:"
-msgstr ""
-
-#: /public/include/user.js
-msgid "An unknown error occurred. Please contact staff on discord"
-msgstr ""
-
-#: /public/include/user.js
-msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
-msgstr ""
-
-#: /public/include/user.js
-msgid "If you disagree, please contact us on Discord (link in the info panel)."
-msgstr ""
-
-#: /public/include/user.js
-msgid "New Username:"
-msgstr ""
-
-#: /public/include/user.js
-msgid "Not now"
-msgstr ""
-
-#: /public/include/user.js
-msgid "Change"
-msgstr ""
-
-#: /public/include/user.js
-msgid "You must change your username."
-msgstr ""
-
-#: /public/include/user.js
-msgid "Click here to continue."
-msgstr ""
-
-#: /public/pxls.js
-msgid "Alert"
 msgstr ""

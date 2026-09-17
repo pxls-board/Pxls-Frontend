@@ -501,7 +501,7 @@ export const useChatStore = defineStore('chat', () => {
     );
 
     Object.keys(window.emojiDB)
-      .sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()))
+      .toSorted((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()))
       .forEach((name) => dbEmoji.addEntry(name, window.emojiDB[name]!));
     for (const emoji of customEmoji.value) {
       window.emojiDB[emoji.name.toLowerCase()] = emoji.emoji;
@@ -601,7 +601,7 @@ export const useChatStore = defineStore('chat', () => {
   }
 
   function markLastSeen() {
-    const last = [...lines.value].reverse().find((line) => line.kind === 'message');
+    const last = lines.value.findLast((line) => line.kind === 'message');
     if (last && last.kind === 'message') {
       ls.set('chat-last_seen_id', last.id);
     }
@@ -820,7 +820,7 @@ export const useChatStore = defineStore('chat', () => {
         break;
       case 'lookup-mod': {
         const admin = user().admin as { checkUser?: { check?: (arg: unknown, type: string) => void } } | false;
-        admin && admin.checkUser?.check?.(snip ? target.id : username, snip ? 'cmid' : 'username');
+        if (admin) admin.checkUser?.check?.(snip ? target.id : username, snip ? 'cmid' : 'username');
         break;
       }
       case 'lookup-chat':
@@ -906,10 +906,10 @@ export const useChatStore = defineStore('chat', () => {
     const response = await fetch('/chat/history');
     const history = (await response.json()) as ChatPacket[];
     if (seenHistory) return;
-    for (const packet of history.reverse()) {
+    for (const packet of history.toReversed()) {
       processPacket(packet, true);
     }
-    const last = [...lines.value].reverse().find((line) => line.kind === 'message');
+    const last = lines.value.findLast((line) => line.kind === 'message');
     if (last && last.kind === 'message') {
       chatEvents.emit('scrollToBottom');
       if (last.id > (ls.get<number>('chat-last_seen_id') ?? 0)) {
@@ -1049,7 +1049,7 @@ export const useChatStore = defineStore('chat', () => {
         .filter(
           (line): line is ChatMessageLine => line.kind === 'message' && line.author === event.target && !line.purge,
         )
-        .sort((a, b) => a.date - b.date)
+        .toSorted((a, b) => a.date - b.date)
         .slice(-event.amount);
       purgeLines(targets, purge);
       if (event.announce) {

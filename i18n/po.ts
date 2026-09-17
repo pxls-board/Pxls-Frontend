@@ -10,7 +10,8 @@ export function poToMessages(source: string): Record<string, string> {
 
   const flush = () => {
     if (msgid && msgstr) {
-      messages[msgid] = msgstr;
+      // Older extractions kept JS escapes (`Couldn\'t`) in ids.
+      messages[msgid.replace(/\\'/g, "'")] = msgstr;
     }
     msgid = msgstr = null;
     current = null;

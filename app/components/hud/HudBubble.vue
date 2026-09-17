@@ -22,6 +22,7 @@ const showCooldown = computed(
 
 const coordsText = computed(() => (coords.mouse ? `(${coords.mouse.x}, ${coords.mouse.y})` : '(???, ???)'));
 
+const loadingOnline = computed(() => t('Loading online user count&hellip;'));
 const numberFormat = (value: number | null) => (value == null ? t('N/A') : value.toLocaleString());
 
 function confirmSignOut() {
@@ -107,7 +108,7 @@ const collapseIcon = computed(() => {
         <div class="mb-2 flex items-center gap-1.5">
           <UIcon :name="ICONS.online" class="size-5 shrink-0" />
           <span class="font-bold">{{ $t('Online:') }}</span>
-          <span v-if="user.onlineCount === null" v-html="$t('Loading online user count&hellip;')" />
+          <span v-if="user.onlineCount === null" v-html="loadingOnline" />
           <span v-else>{{ user.onlineCount }}</span>
         </div>
         <div class="flex items-center gap-1.5">

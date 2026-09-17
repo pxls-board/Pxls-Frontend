@@ -1,1 +1,0 @@
-import{h as e,z as t}from"./K9wq2giD.js";import{t as n}from"#entry";var r={},i={class:`bg-pxls-panel p-4 synthwave:text-pink-300`};function a(n,r){return t(),e(`div`,i,`hello`)}var o=n(r,[[`render`,a]]);export{o as default};

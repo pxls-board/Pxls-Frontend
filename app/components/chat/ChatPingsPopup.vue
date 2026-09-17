@@ -16,7 +16,11 @@ function jump(id: number) {
 </script>
 
 <template>
-  <UPopover v-model:open="open">
+  <UPopover
+    v-model:open="open"
+    :content="{ side: 'left', align: 'start', collisionPadding: 8 }"
+    :ui="{ content: 'z-30' }"
+  >
     <UButton
       :icon="ICONS.mention"
       color="neutral"

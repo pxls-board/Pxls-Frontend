@@ -14,7 +14,7 @@ const BAD_SOURCES = [
   /^chrome-extension:\/\/lmleofkkoohkbgjikogbpmnjmpdedfil/i,
   /^https?:\/\/.*mlpixel\.org/i,
 ];
-const BAD_EVENTS = ['mousedown', 'mouseup', 'click'];
+const BAD_EVENTS = new Set(['mousedown', 'mouseup', 'click']);
 
 // Globals set by known bots.
 const BAD_WINDOW_GLOBALS = [
@@ -63,11 +63,11 @@ export const useBanStore = defineStore('ban', () => {
     name: 'Event' | 'CustomEvent',
     original: T,
   ) {
-    const wrapped = function (type: string, init?: EventInit) {
-      if (BAD_EVENTS.includes(String(type).toLowerCase())) {
+    const wrapped = function (type: string, eventInit?: EventInit) {
+      if (BAD_EVENTS.has(String(type).toLowerCase())) {
         shadow(`bad ${name} ${String(type).toLowerCase()}`);
       }
-      return new original(type, init);
+      return new original(type, eventInit);
     } as unknown as T;
     // Keep `instanceof Event` working for libraries.
     wrapped.prototype = original.prototype;
@@ -102,7 +102,7 @@ export const useBanStore = defineStore('ban', () => {
 
     const createEvent = document.createEvent.bind(document);
     document.createEvent = ((eventInterface: string) => {
-      if (BAD_EVENTS.includes(eventInterface.toLowerCase())) {
+      if (BAD_EVENTS.has(eventInterface.toLowerCase())) {
         shadow(`bad document.createEvent ${eventInterface.toLowerCase()}`);
       }
       return createEvent(eventInterface);

@@ -110,12 +110,6 @@ export default defineNuxtConfig({
     },
   },
 
-  eslint: {
-    config: {
-      standalone: false,
-    },
-  },
-
   typescript: {
     strict: true,
   },

@@ -2,9 +2,8 @@ import twemoji from '@twemoji/api';
 import { addIcon, buildIcon, getIcon } from '@iconify/vue';
 import { init as initIconBundle } from '#build/nuxt-icon-client-bundle';
 import { EMOJI_REGEX } from './emoji-regex';
-import '~/vendor/crel-global';
 import '~/vendor/emojiDB.min.js';
-import '~/vendor/pxlsMarkdown.min.js';
+import '~/vendor/pxls-markdown';
 
 /* The vendored pxlsMarkdown is a unified-style processor that compiles to DOM nodes. */
 

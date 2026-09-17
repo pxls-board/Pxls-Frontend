@@ -1,2 +1,0 @@
-function e(e){let n={},r=null,i=null,a=null,o=()=>{r&&i&&(n[r]=i),r=i=null,a=null};for(let n of e.split(/\r?\n/)){let e=n.trim();e.startsWith(`msgid `)?(o(),a=`msgid`,r=t(e.slice(6))):e.startsWith(`msgstr `)?(a=`msgstr`,i=t(e.slice(7))):e.startsWith(`"`)&&a?a===`msgid`?r=(r??``)+t(e):i=(i??``)+t(e):(e===``||e.startsWith(`#`))&&e===``&&o()}return o(),n}function t(e){return e.trim().slice(1,-1).replace(/\\(.)/g,(e,t)=>{switch(t){case`n`:return`
-`;case`t`:return`	`;default:return t}})}export{e as t};

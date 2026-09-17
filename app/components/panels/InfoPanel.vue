@@ -1,60 +1,67 @@
 <script setup lang="ts">
 const canvasRules = [
-  'No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism.',
+  msg(
+    'No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism.',
+  ),
   {
-    text: 'No NSFW or NSFL content.',
+    text: msg('No NSFW or NSFL content.'),
     children: [
       {
-        text: 'No nudity or otherwise sexually explicit content',
-        children: ['No female-presenting nipples/bare breasts, genitalia, sexual fluids'],
+        text: msg('No nudity or otherwise sexually explicit content'),
+        children: [msg('No female-presenting nipples/bare breasts, genitalia, sexual fluids')],
       },
-      'No sexual imagery/erotica',
-      'No excessive blood or otherwise obscene/shocking content',
+      msg('No sexual imagery/erotica'),
+      msg('No excessive blood or otherwise obscene/shocking content'),
     ],
   },
-  'No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas.',
-  'No auto-placement tools of any kind, you must place the pixels manually.',
-  'Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)',
-  'Any automated aggregation of data from user lookups is not allowed, and will result in a ban.',
+  msg(
+    'No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas.',
+  ),
+  msg('No auto-placement tools of any kind, you must place the pixels manually.'),
+  msg('Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)'),
+  msg('Any automated aggregation of data from user lookups is not allowed, and will result in a ban.'),
   {
-    text: 'Staff have final say in any rule disputes',
-    children: ['If you feel a moderator has acted inappropriately, please report it to an administrator.'],
+    text: msg('Staff have final say in any rule disputes'),
+    children: [msg('If you feel a moderator has acted inappropriately, please report it to an administrator.')],
   },
 ];
 
 const chatRules = [
-  'Keep chat civil. No harassment or homophobic/transphobic/disablist language.',
-  { text: 'No hate speech. This includes emoji/symbols/ASCII art.', children: ['Normal swearing/etc is allowed'] },
-  { text: 'No spamming', children: ['This includes excessive ASCII art/emojis/symbols/whitespace'] },
-  'No "copy pasta"s',
-  'No links to sites that actively break the canvas or chat rules (e.g. porn sites)',
-  'No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)',
-  'No personal information',
+  msg('Keep chat civil. No harassment or homophobic/transphobic/disablist language.'),
   {
-    text: 'Staff have final say in any rule disputes',
-    children: ['If you feel a moderator has acted inappropriately, please report it to an administrator.'],
+    text: msg('No hate speech. This includes emoji/symbols/ASCII art.'),
+    children: [msg('Normal swearing/etc is allowed')],
+  },
+  { text: msg('No spamming'), children: [msg('This includes excessive ASCII art/emojis/symbols/whitespace')] },
+  msg('No "copy pasta"s'),
+  msg('No links to sites that actively break the canvas or chat rules (e.g. porn sites)'),
+  msg('No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)'),
+  msg('No personal information'),
+  {
+    text: msg('Staff have final say in any rule disputes'),
+    children: [msg('If you feel a moderator has acted inappropriately, please report it to an administrator.')],
   },
 ];
 
 const linkGroups = [
   [
-    { href: 'https://docs.pxls.space/en/legal/terms', label: 'Terms of Service' },
-    { href: 'https://docs.pxls.space/en/legal/privacy', label: 'Privacy Policy' },
+    { href: 'https://docs.pxls.space/en/legal/terms', label: msg('Terms of Service') },
+    { href: 'https://docs.pxls.space/en/legal/privacy', label: msg('Privacy Policy') },
   ],
   [
-    { href: 'https://pxls.space/discord', label: 'Discord (main hub)' },
-    { href: 'https://twitter.com/pxlsspace', label: 'Twitter' },
-    { href: 'https://bsky.app/profile/pxls.space', label: 'Bluesky' },
-    { href: 'https://github.com/pxlsspace/Pxls', label: 'GitHub (back end)' },
-    { href: 'https://github.com/pxlsspace/pxls-web', label: 'GitHub (front end)' },
+    { href: 'https://pxls.space/discord', label: msg('Discord (main hub)') },
+    { href: 'https://twitter.com/pxlsspace', label: msg('Twitter') },
+    { href: 'https://bsky.app/profile/pxls.space', label: msg('Bluesky') },
+    { href: 'https://github.com/pxlsspace/Pxls', label: msg('GitHub (back end)') },
+    { href: 'https://github.com/pxlsspace/pxls-web', label: msg('GitHub (front end)') },
     // translator: link to piskelapp.com
-    { href: 'http://www.piskelapp.com/p/create/sprite', label: 'Single-player mode' },
+    { href: 'http://www.piskelapp.com/p/create/sprite', label: msg('Single-player mode') },
   ],
   [
-    { href: 'https://pxls.space/stats', label: 'Statistics' },
-    { href: 'https://pxls.space/profile', label: 'Profile (user info, factions, etc.)' },
-    { href: 'https://wiki.pxls.space', label: 'Wiki' },
-    { href: 'https://archives.pxls.space/', label: 'Archives' },
+    { href: 'https://pxls.space/stats', label: msg('Statistics') },
+    { href: 'https://pxls.space/profile', label: msg('Profile (user info, factions, etc.)') },
+    { href: 'https://wiki.pxls.space', label: msg('Wiki') },
+    { href: 'https://archives.pxls.space/', label: msg('Archives') },
   ],
 ];
 </script>

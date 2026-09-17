@@ -61,9 +61,14 @@ function run(action: ChatAction, event: MouseEvent) {
 </script>
 
 <template>
-  <UPopover v-model:open="open" :reference="anchor ?? undefined" :content="{ side: 'bottom', align: 'center' }">
+  <UPopover
+    v-model:open="open"
+    :reference="anchor ?? undefined"
+    :content="{ side: 'left', align: 'start', collisionPadding: 8 }"
+    :ui="{ content: 'z-30' }"
+  >
     <template #content>
-      <div v-if="line" class="w-80 max-w-[90vw]" :data-popup-for="line.id">
+      <div v-if="line" class="w-80 max-w-[min(90vw,24rem)]" :data-popup-for="line.id">
         <header class="flex items-center gap-2 border-b border-default bg-elevated px-3 py-2">
           <ChatUserDisplay
             :author="line.author"

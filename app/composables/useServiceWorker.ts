@@ -12,8 +12,9 @@ function init() {
   if (navigator.serviceWorker.controller == null) {
     navigator.serviceWorker
       .register('/serviceWorker.js')
-      .then(() => {
+      .then((registration) => {
         isInit = true;
+        return registration;
       })
       .catch((error) => console.error('Failed to register Service Worker:', error));
   } else {
@@ -52,6 +53,7 @@ function postMessage(data: Record<string, unknown>) {
   void navigator.serviceWorker.ready.then(({ installing, waiting, active }) => {
     const worker = navigator.serviceWorker.controller ?? installing ?? waiting ?? active;
     worker?.postMessage(data);
+    return worker;
   });
 }
 

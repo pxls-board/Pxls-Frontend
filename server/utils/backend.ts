@@ -19,6 +19,7 @@ export function isFrontendPath(path: string): boolean {
     // Nuxt internals: /_nuxt, /__nuxt_error, /_i18n, /api/_nuxt_icon …
     path.startsWith('/_') ||
     path.startsWith('/api/_') ||
+    path === '/pxls-api.d.ts' ||
     isPublicAsset(path)
   );
 }

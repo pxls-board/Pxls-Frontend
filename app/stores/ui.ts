@@ -14,26 +14,26 @@ export interface PxlsTheme {
 // Index order matches the old client, whose setting stored the index.
 export const THEMES: PxlsTheme[] = [
   // translator: theme name
-  { id: 'dark', name: 'Dark', color: '#1A1A1A', colorMode: 'dark' },
+  { id: 'dark', name: msg('Dark'), color: '#1A1A1A', colorMode: 'dark' },
   // translator: theme name
-  { id: 'darker', name: 'Darker', color: '#000', colorMode: 'dark' },
+  { id: 'darker', name: msg('Darker'), color: '#000', colorMode: 'dark' },
   // translator: theme name
-  { id: 'blue', name: 'Blue', color: '#0000FF', colorMode: 'dark' },
+  { id: 'blue', name: msg('Blue'), color: '#0000FF', colorMode: 'dark' },
   // translator: theme name
-  { id: 'purple', name: 'Purple', color: '#5a2f71', colorMode: 'dark' },
+  { id: 'purple', name: msg('Purple'), color: '#5a2f71', colorMode: 'dark' },
   // translator: theme name
-  { id: 'green', name: 'Green', color: '#005f00', colorMode: 'dark' },
+  { id: 'green', name: msg('Green'), color: '#005f00', colorMode: 'dark' },
   // translator: theme name
-  { id: 'matte', name: 'Matte', color: '#468079', colorMode: 'dark' },
+  { id: 'matte', name: msg('Matte'), color: '#468079', colorMode: 'dark' },
   // translator: theme name
-  { id: 'terminal', name: 'Terminal', color: '#94e044', colorMode: 'dark' },
+  { id: 'terminal', name: msg('Terminal'), color: '#94e044', colorMode: 'dark' },
   // translator: theme name
-  { id: 'red', name: 'Red', color: '#cf0000', colorMode: 'dark' },
+  { id: 'red', name: msg('Red'), color: '#cf0000', colorMode: 'dark' },
   // translator: theme name
-  { id: 'synthwave', name: 'Synthwave', color: '#1d192c', colorMode: 'dark' },
+  { id: 'synthwave', name: msg('Synthwave'), color: '#1d192c', colorMode: 'dark' },
   // translator: theme name
-  { id: 'pink', name: 'Pink', color: '#f5cdde', colorMode: 'light' },
-  { id: 'blurple', name: 'Blurple (Discord)', color: '#5865F2', colorMode: 'dark' },
+  { id: 'pink', name: msg('Pink'), color: '#f5cdde', colorMode: 'light' },
+  { id: 'blurple', name: msg('Blurple (Discord)'), color: '#5865F2', colorMode: 'dark' },
 ];
 
 export type BubbleAnimation = 'plusone' | 'shake' | 'bump' | 'pulse';

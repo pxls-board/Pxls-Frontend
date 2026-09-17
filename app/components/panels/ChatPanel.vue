@@ -7,7 +7,6 @@ const settings = useSettings();
 const settingsStore = useSettingsStore();
 const timer = useTimerStore();
 const board = useBoardStore();
-const ui = useUiStore();
 const { t } = useI18n();
 
 const body = ref<HTMLElement | null>(null);

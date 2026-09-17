@@ -60,7 +60,7 @@ export const useTimerStore = defineStore('timer', () => {
       if (alertDelay < 0 && delta <= Math.abs(alertDelay)) {
         hasFiredNotification = true;
         const delay = Math.round(Math.abs(alertDelay) * 10) / 10;
-        fireNotification('Your next pixel will be available in ${delay} seconds!', { delay });
+        fireNotification(msg('Your next pixel will be available in ${delay} seconds!'), { delay });
         setTimeout(() => {
           if (hasFiredNotification) {
             ui.updateAvailable(1, 'gain');
@@ -71,7 +71,7 @@ export const useTimerStore = defineStore('timer', () => {
         ui.updateAvailable(1, 'gain');
         setTimeout(() => {
           if (ui.pixelsAvailable > 0) {
-            fireNotification('Your next pixel has been available for ${alertDelay} seconds!', {
+            fireNotification(msg('Your next pixel has been available for ${alertDelay} seconds!'), {
               alertDelay: Math.round(alertDelay * 10) / 10,
             });
           }
@@ -79,7 +79,7 @@ export const useTimerStore = defineStore('timer', () => {
       } else if (delta <= 0) {
         hasFiredNotification = true;
         ui.updateAvailable(1, 'gain');
-        fireNotification('Your next pixel is available!');
+        fireNotification(msg('Your next pixel is available!'));
       }
     }
 

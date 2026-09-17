@@ -15,8 +15,12 @@ function section(
 }
 
 const sections = computed(() => [
-  section('Canvas Reports ({0}/{1} open)', props.data.canvasReports ?? [], t('There are no canvas reports to show.')),
-  section('Chat Reports ({0}/{1} open)', props.data.chatReports ?? [], t('There are no chat reports to show.')),
+  section(
+    msg('Canvas Reports ({0}/{1} open)'),
+    props.data.canvasReports ?? [],
+    t('There are no canvas reports to show.'),
+  ),
+  section(msg('Chat Reports ({0}/{1} open)'), props.data.chatReports ?? [], t('There are no chat reports to show.')),
 ]);
 
 function reportItems(reports: ProfileReport[]): AccordionItem[] {

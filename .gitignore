@@ -89,6 +89,8 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
+.output
+.data
 dist
 
 # Gatsby files
@@ -133,5 +135,4 @@ dist
 .idea
 
 # Pxls-specific
-config.json5
 *~

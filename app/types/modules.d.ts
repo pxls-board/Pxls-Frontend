@@ -11,3 +11,6 @@ declare module '*.po?raw' {
 // Loaded lazily for the staff admin script only.
 declare module 'jquery';
 declare module 'crel';
+
+declare module '~/vendor/*.min.js';
+declare module '*.min.js';

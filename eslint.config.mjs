@@ -12,6 +12,8 @@ export default withNuxt(
     rules: {
       // Translated strings with markup are rendered with v-html on purpose.
       'vue/no-v-html': 'off',
+      // Plain objects are used as maps in a few places.
+      '@typescript-eslint/no-dynamic-delete': 'off',
       // Stylistic concerns are handled by oxfmt.
       'vue/html-self-closing': 'off',
       'vue/singleline-html-element-content-newline': 'off',

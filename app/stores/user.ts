@@ -167,6 +167,7 @@ export const useUserStore = defineStore('user', () => {
       .then((response) => response.json() as Promise<{ count: number }>)
       .then((data) => {
         onlineCount.value = data.count;
+        return data;
       })
       .catch((error) => {
         console.error('Error fetching /users: ', error);

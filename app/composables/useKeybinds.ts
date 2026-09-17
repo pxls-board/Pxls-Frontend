@@ -1,4 +1,4 @@
-const NUM_KEYS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '`'];
+const NUM_KEYS = new Set(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '`']);
 
 /** Global canvas hotkeys (see the Keybinds section of the settings panel). */
 export function useKeybinds() {
@@ -53,7 +53,7 @@ export function useKeybinds() {
     // Let dialogs handle their own keys.
     if (useModalStore().stack.length > 0) return;
 
-    if (NUM_KEYS.includes(event.key)) {
+    if (NUM_KEYS.has(event.key)) {
       handlePaletteDigit(event.key);
     }
 

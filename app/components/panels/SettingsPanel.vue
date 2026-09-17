@@ -34,39 +34,42 @@ const noResults = computed(() => search.value.trim() !== '' && !anyVisible.value
 // ---- Keybinds -------------------------------------------------------------
 
 const generalKeybinds: [string, string][] = [
-  ['move;moving;panning;drag', 'Mouse/arrows/wasd to pan'],
-  ['mousewheel;zooming', 'Scroll/pinch to zoom'],
-  ['scroll;zooming', '<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom'],
-  ['lookups', '<kbd>Shift</kbd> + Click/Hold touch to lookup pixel'],
-  ['overlays;alignment;grid hidden;grid shown;hide grid;show grid', '<kbd>G</kbd> to toggle grid'],
+  [msg('move;moving;panning;drag'), msg('Mouse/arrows/wasd to pan')],
+  [msg('mousewheel;zooming'), msg('Scroll/pinch to zoom')],
+  [msg('scroll;zooming'), msg('<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom')],
+  [msg('lookups'), msg('<kbd>Shift</kbd> + Click/Hold touch to lookup pixel')],
+  [msg('overlays;alignment;grid hidden;grid shown;hide grid;show grid'), msg('<kbd>G</kbd> to toggle grid')],
   [
-    'close;information shown;information hidden;info shown;info hidden;hide information;show information',
-    '<kbd>I</kbd> to open info',
+    msg('close;information shown;information hidden;info shown;info hidden;hide information;show information'),
+    msg('<kbd>I</kbd> to open info'),
   ],
-  ['close;settings hidden;settings shown;hide settings;show settings', '<kbd>T</kbd> to open settings'],
-  ['close;chat hidden;chat shown;hide chat;show chat', '<kbd>B</kbd> to open chat'],
-  ['canvas locked;move;moving;zoom;zooming', '<kbd>L</kbd> to toggle locking panning of the canvas'],
-  ['take screenshot;image;download;picture;canvas', '<kbd>P</kbd> to take a snapshot'],
+  [msg('close;settings hidden;settings shown;hide settings;show settings'), msg('<kbd>T</kbd> to open settings')],
+  [msg('close;chat hidden;chat shown;hide chat;show chat'), msg('<kbd>B</kbd> to open chat')],
+  [msg('canvas locked;move;moving;zoom;zooming'), msg('<kbd>L</kbd> to toggle locking panning of the canvas')],
+  [msg('take screenshot;image;download;picture;canvas'), msg('<kbd>P</kbd> to take a snapshot')],
   [
-    'overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap',
-    '<kbd>H</kbd> to toggle heatmap',
+    msg('overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap'),
+    msg('<kbd>H</kbd> to toggle heatmap'),
   ],
   [
-    'overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap',
-    '<kbd>X</kbd> to toggle virginmap',
+    msg('overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap'),
+    msg('<kbd>X</kbd> to toggle virginmap'),
   ],
-  ['overlays;user activity;pixels placed pixels;wipe;clean;', '<kbd>O</kbd> to clear heatmap'],
-  ['overlays;user activity;pixels unplaced pixels;wipe;clean;', '<kbd>U</kbd> to clear virginmap'],
-  ['next color;previous color', '<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors'],
-  ['current coordinates;coords', '<kbd>C</kbd> to copy link of moused-over coordinates'],
-  ['cancel selection', '<kbd>ESC</kbd> to deselect current pixel'],
-  ['recenter;jump;center on template;guides;focus', '<kbd>R</kbd> to center the board on the current template'],
+  [msg('overlays;user activity;pixels placed pixels;wipe;clean;'), msg('<kbd>O</kbd> to clear heatmap')],
+  [msg('overlays;user activity;pixels unplaced pixels;wipe;clean;'), msg('<kbd>U</kbd> to clear virginmap')],
+  [msg('next color;previous color'), msg('<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors')],
+  [msg('current coordinates;coords'), msg('<kbd>C</kbd> to copy link of moused-over coordinates')],
+  [msg('cancel selection'), msg('<kbd>ESC</kbd> to deselect current pixel')],
+  [
+    msg('recenter;jump;center on template;guides;focus'),
+    msg('<kbd>R</kbd> to center the board on the current template'),
+  ],
 ];
 
 const templateKeybinds: [string, string][] = [
-  ['transparency', '<kbd>Page Up</kbd> to increase opacity'],
-  ['transparency', '<kbd>Page Down</kbd> to decrease opacity'],
-  ['hidden;shown;hide;show', '<kbd>V</kbd> to toggle visibility'],
+  [msg('transparency'), msg('<kbd>Page Up</kbd> to increase opacity')],
+  [msg('transparency'), msg('<kbd>Page Down</kbd> to decrease opacity')],
+  [msg('hidden;shown;hide;show'), msg('<kbd>V</kbd> to toggle visibility')],
 ];
 
 const stripTags = (html: string) => html.replace(/<[^>]+>/g, '');
@@ -75,27 +78,27 @@ const stripTags = (html: string) => html.replace(/<[^>]+>/g, '');
 
 const TEMPLATE_STYLES: [string, string][] = [
   [
-    '1-to-1',
+    msg('1-to-1'),
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/gD1AOQaL8IZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVQ4y2P8////fwYKABMDhWDUgFEDRg0YDAYwMjIyAgBr1AQgfweGSgAAAABJRU5ErkJggg==',
   ],
   [
-    '1-to-1 (keep incorrect colors)',
+    msg('1-to-1 (keep incorrect colors)'),
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGklEQVQoz2P8//8/AymAiYFEMKphVMPQ0QAAVW0DHZ8uFaIAAAAASUVORK5CYII=',
   ],
   [
-    'Dotted (Small, 1:2)',
+    msg('Dotted (Small, 1:2)'),
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAAmJLR0QA/4ePzL8AAAAzSURBVFjD7dBBDQAACMSw828aVEAI6R4T0GShGv6DECFChAgRIkSIECFChAgRIkSIruA0nub+AuTzLZoAAAAASUVORK5CYII=',
   ],
   [
-    'Dotted (Big, 2:2)',
+    msg('Dotted (Big, 2:2)'),
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAWklEQVR42u3UwQkAIAwEwcX+e9aP2INkBvK4d2CLqva9cXv5PWgAoAGgARoAGqABoAEaABqgAaABGgAaoAGgARoAGqABoAEaABqgAaABGgAaoAGgAT/vRwOmO8dS/DI1VxCbAAAAAElFTkSuQmCC',
   ],
   [
-    'Symbols',
+    msg('Symbols'),
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABwAQMAAAD8LmYIAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAZQTFRFAAAAAwMDFQUF7wAAAAJ0Uk5TAP9bkSK1AAAAuUlEQVR4nGNgQAUhjQvdz0uwMfx82OrVIgPkBj/xaOEQ6GRuP9vHAeQGsPjzyVj8LH5+iAXEDTziMd+uplHg+VE+GQaNjwHt5+WB3A+HO+bbMRACDoed+Xg0FIMW97dIMLAwNC45OF8ip+Dh8aN8Ngwsjc2sXfNFBAoePz8xX46B5+DhNj4WlpwCx+NH5W0Yan5+fn6+xU5DwWlxf58EAWs0DFC4NQX4uBaoXAFUvaNgFIyCUTAKaAYAzI49GM5w0hQAAAAASUVORK5CYII=',
   ],
   [
-    'Numbers',
+    msg('Numbers'),
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACwCAYAAACvt+ReAAAE10lEQVR42u3d3bKjKBQGULDy/q/MXE1VdzqRH9kqZq2bqZn5JKAmErbm5JRSSbCw0pGTlb1VdttpoAS9AUpANgW1u0q2dGxTOo7faLu92TTa7vZlozz55P2/zRyQ7RXRj97+zsyWjm1GT97aGI9kR8aWaydwxIEg7g05ms0nvcnCsq8bzrVnvVNr2RyQzReP7eeO33bBp0We/E6NnJr0nJAR7UZOpR5x/LYEC9smrCyMrETMXErpvazd4fI9c3+VnW/2teze8Ss7qwAt7ZYJ50y13deqk/fBbVYb28iY8mLZvf9ebTcnlTgeOIWAZShJyi6bfX3YOH84sfOXF7oyW3amQrXs++vMarc3m7/048w+rJT957htlU/i3HCQ93J77R7N5o4vD+/ZUvmSkRvHdiSbOvqwt/2RbA7av6cdt+0Bqw8jlMDX9M9xq5WS71xKjS5VtmxbDvZ3JJsDsvnEsU09dq+GM75MPnl72s2VQZx1JehdA23pb8/YevdDax/KhWMrM84Vy2gs7dOXuJGSZMslYLTUWbsUtbT7nm25ibqlhPqp3Z7+po7+RuyHnj707t/S8fql8/XLyHzE2qPs7bJKyTxmCgFLcimSXTa7fdiwfPn3NDGbgtq9ezYNZke++JaAbApqdzj75zrw+9rd3lrekeye1vsljmZ7+5snZL/1q2clJw3uwxnZXlGPWP3VX3PgNSh9f/HaeaeXzk+FEpzNAdl88dhSQPanjttWeafX7lZq/ZRovQPqSLanDyWo3ci70XqyvXeutbQbeVdez91onkrmmVOII3c1RV02I+8Ei2g36sc/SuOVo+WSfKS/EdOfw/2wnii7bFYpmaWZA7M8lyLZZbOvD0sUf/4z7XyJ68n++f88PfyDTw9H9WHWI0W17JFHXmqv+WnHzcymjj7Utj2yvpwC9u/yx+3uc2Al1DWddtxelfnw7DJjxI9Kt14pSuM7flY2B2TzxWO73XF7/12IM8qMtXeuEmpDCfWEsR2dSvVOu4ZuWbCMxtJaf9gkHcjNKM3WVgBqlzGl7/7+HhlfrfQ9ejdaOXqSysreKquUzNLMgVmeS5Hsstlv9wMroY5lW7+4KH1Pyr6vQiihHnsquTSMy1Pf4/v3n6w58FxK3yf7VkpWQo35M7Ol4xPzvd0SnM0B2Rw9tq1y+f7Fp4fPOHlr/SgdYysHxta7H3pOyIh2/a1kfmMK0fqJ0rrd3Uq5nh6O3Q8peP8Obywre6usUjJLMwdmeS5Fsstma6Xkb8scSqjPyC5/3Fp+nfKbI0+hRq0vp45s72MsOaC/V2eXP26z5sBKqGta/rjNWgfuyfrh7Pix/cxx2w68Iy95CvWiS5wfzt7f/rKnvi2j8egpxC2fQr355TCiXU9972xrPVF22axSMo+aQkCUsCU7lyLZM7Lhn8BKqOf39xdL31PN+kOHSqhj+yF1ju0ppe+wE9h8jKW/xK1WQj1D5GM3I9mIH5vOF49tyifwij/AfOYndk8JNqLNiDJ/CWr3tOOmlMxjphB+gPn4VErp+4Jpn3VK2TOyYXM7pWTO+h4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE/1H4IIqRgL4W2oAAAAAElFTkSuQmCC',
   ],
 ];
@@ -165,7 +168,7 @@ const templateWidth = computed({
 });
 const convertMode = computed({
   get: () => template.options.convertMode,
-  set: (convertMode: string) => template.update({ convertMode }),
+  set: (mode: string) => template.update({ convertMode: mode }),
 });
 
 const fileInput = ref<HTMLInputElement | null>(null);
@@ -275,7 +278,7 @@ const selectedNameColor = computed(() => nameColorItems.value.find((item) => ite
 const ignoreSelection = ref<string | undefined>();
 const ignoreFeedback = ref<{ text: string; error: boolean } | null>(null);
 const sortedIgnores = computed(() =>
-  [...chat.ignored].sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase())),
+  chat.ignored.toSorted((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase())),
 );
 
 function unignore() {
