@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>{{title}}</title>
-    <meta name="keywords" content="pxls, pixels, place, place clone, art, r/place">
+    <meta name="keywords" content="DyaRikku, Bliniversary 2026, Chatblin">
     {{! Site description }}
-    <meta name="description" content="{{{i18n 'Place pixels with people to create art'}}}">
+    <meta name="description" content="{{{i18n 'The Pxls Canvas for DyaRikku\'s 2026 Bliniversary!'}}}">
     <meta name="google-play-app" content="app-id=space.pxls.android">
     <link rel="stylesheet" href="jquery.modal.min.css">
     <link rel="stylesheet" href="fontawesome-all.min.css">
@@ -153,7 +153,7 @@
             </p>
             <p>
                 <label class="input-group">
-                    <span class="label-text">{{{i18n 'Discord Tag (Optional):'}}}</span>
+                    <span class="label-text">{{{i18n 'Discord username (Optional):'}}}</span>
                     <input id="signup-discord-input" type="text" maxlength="64" placeholder="username1234">
                 </label>
             </p>
@@ -399,13 +399,13 @@
                             <select id="setting-ui-language-override">
                                 <option value="" selected>{{{i18n 'Use Browser Language'}}}</option>
                                 <option value="en" selected>{{{i18n 'English'}}}</option>
-                                <option value="bg" selected>{{{i18n 'Bulgarian'}}}</option>
+                                {{!-- <option value="bg" selected>{{{i18n 'Bulgarian'}}}</option>
                                 <option value="fr" selected>{{{i18n 'French'}}}</option>
                                 <option value="de" selected>{{{i18n 'German'}}}</option>
                                 <option value="ru" selected>{{{i18n 'Russian'}}}</option>
                                 <option value="sv" selected>{{{i18n 'Swedish'}}}</option>
                                 <option value="fi" selected>{{{i18n 'Finnish'}}}</option>
-                                <option value="tok" selected>{{{i18n 'Toki Pona'}}}</option>
+                                <option value="tok" selected>{{{i18n 'Toki Pona'}}}</option> --}}
                             </select>
                         </label>
                     </div>
@@ -801,6 +801,8 @@
                 </section>
                 <section data-keywords="{{{i18n 'notification;pixel ready;alert'}}}">
                     <h4>{{{i18n 'Pixel Ready Notification'}}}</h4>
+                    <span class="label-text">{{{i18n 'Standard available sounds: 1-pixel.wav | pixel.wav | blin.wav | notify.wav (default)'}}}</span>
+                    <br>
                     <div data-keywords="{{{i18n 'alert source;notify url;notify source;notification url;notification source'}}}">
                         <label class="input-group">
                             <span class="label-text">{{{i18n 'Alert URL:'}}}</span>
