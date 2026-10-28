@@ -58,8 +58,13 @@ module.exports.template = (function() {
       safeHosts: [
         'imgur.com',
         'media.discordapp.net',
+        'cdn.discordapp.com',
         'pxlsfiddle.com',
         'zaix.ru',
+        'catbox.moe',
+        'imgbb.com',
+        'yoccithon2026.xyz',
+        'yolodev.nl',
         window.location.host
       ]
     },
