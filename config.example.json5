@@ -6,5 +6,7 @@
   proxyTo: 'localhost:4567',
 
   // Displayed on each page
-  title: 'pxls.space',
+  title: '<title>',
+  description: '<description>',
+  keywords: '<keyword>, <keyword>, <keyword>',
 }
