@@ -57,6 +57,8 @@ app.use('/', async (req, res, next) => {
   if (req.path === '/') {
     res.render('index', {
       title: config.title,
+      keywords: config.keywords,
+      description: config.description,
       lang: langCode,
       scriptLang: langCode === 'en' ? '' : '_' + langCode,
 
